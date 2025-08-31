@@ -10,7 +10,7 @@ const consultants = [
     tarifJournalier: '€380/jour',
     competences: ['Python', 'Machine Learning', 'Data Analysis', 'SQL'],
     experience: '8+ ans',
-    projetsRealises: 8,
+    projetsRealises: 5,
     entreprises: ['Orange', 'BNP Paribas', 'L\'Oréal']
   },
   {
@@ -21,7 +21,7 @@ const consultants = [
     tarifJournalier: '€400/jour',
     competences: ['Gestion de Projet', 'PMO', 'Transformation IT', 'Stratégie'],
     experience: '10+ ans',
-    projetsRealises: 12,
+    projetsRealises: 7,
     entreprises: ['SNCF', 'EDF', 'Engie']
   },
   {
@@ -43,7 +43,7 @@ const consultants = [
     tarifJournalier: '€420/jour',
     competences: ['Gestion de Projet', 'AMOA', 'Agile', 'Stakeholder Management'],
     experience: '12+ ans',
-    projetsRealises: 10,
+    projetsRealises: 8,
     entreprises: ['Air France', 'CMA CGM', 'Bouygues']
   },
   {
@@ -54,7 +54,7 @@ const consultants = [
     tarifJournalier: '€400/jour',
     competences: ['Audit Sécurité', 'Tests Pénétration', 'OWASP', 'Conformité'],
     experience: '7+ ans',
-    projetsRealises: 6,
+    projetsRealises: 3,
     entreprises: ['Société Générale', 'Crédit Agricole', 'AXA']
   },
   {
@@ -65,7 +65,7 @@ const consultants = [
     tarifJournalier: '€350/jour',
     competences: ['AWS', 'Docker', 'Kubernetes', 'Terraform'],
     experience: '9+ ans',
-    projetsRealises: 9,
+    projetsRealises: 6,
     entreprises: ['Thales', 'Airbus', 'Dassault Systèmes']
   },
   {
@@ -76,7 +76,7 @@ const consultants = [
     tarifJournalier: '€350/jour',
     competences: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],
     experience: '5+ ans',
-    projetsRealises: 8,
+    projetsRealises: 3,
     entreprises: ['Ubisoft', 'Criteo', 'BlaBlaCar']
   },
   {
@@ -87,7 +87,7 @@ const consultants = [
     tarifJournalier: '€420/jour',
     competences: ['Architecture Cloud', 'Microservices', 'API Design', 'Kafka'],
     experience: '11+ ans',
-    projetsRealises: 15,
+    projetsRealises: 5,
     entreprises: ['Renault', 'PSA', 'Valeo']
   },
   {
@@ -98,7 +98,7 @@ const consultants = [
     tarifJournalier: '€380/jour',
     competences: ['Scrum', 'Kanban', 'Coaching', 'Transformation Agile'],
     experience: '8+ ans',
-    projetsRealises: 11,
+    projetsRealises: 5,
     entreprises: ['L\'Oréal', 'Sanofi', 'Essilor']
   },
   {
@@ -109,7 +109,7 @@ const consultants = [
     tarifJournalier: '€360/jour',
     competences: ['Analyse Métier', 'UML', 'BPMN', 'Gestion des Exigences'],
     experience: '6+ ans',
-    projetsRealises: 9,
+    projetsRealises: 4,
     entreprises: ['BNP Paribas', 'Crédit Agricole', 'Société Générale']
   },
   {
@@ -120,7 +120,7 @@ const consultants = [
     tarifJournalier: '€400/jour',
     competences: ['Power BI', 'Tableau', 'SQL', 'Data Modeling'],
     experience: '9+ ans',
-    projetsRealises: 13,
+    projetsRealises: 7,
     entreprises: ['Total', 'Engie', 'EDF']
   },
   {
@@ -131,7 +131,7 @@ const consultants = [
     tarifJournalier: '€360/jour',
     competences: ['Figma', 'Adobe XD', 'User Research', 'Prototyping'],
     experience: '7+ ans',
-    projetsRealises: 10,
+    projetsRealises: 7,
     entreprises: ['Decathlon', 'Fnac', 'Boulanger']
   },
   {
@@ -142,7 +142,7 @@ const consultants = [
     tarifJournalier: '€370/jour',
     competences: ['React', 'Vue.js', 'TypeScript', 'CSS3/Sass'],
     experience: '8+ ans',
-    projetsRealises: 12,
+    projetsRealises: 9,
     entreprises: ['Doctolib', 'Back Market', 'Veepee']
   },
   {
@@ -153,7 +153,7 @@ const consultants = [
     tarifJournalier: '€360/jour',
     competences: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis'],
     experience: '6+ ans',
-    projetsRealises: 9,
+    projetsRealises: 5,
     entreprises: ['Orange', 'Bouygues Telecom', 'SFR']
   },
   {
@@ -164,7 +164,7 @@ const consultants = [
     tarifJournalier: '€350/jour',
     competences: ['React Native', 'Flutter', 'iOS', 'Android'],
     experience: '5+ ans',
-    projetsRealises: 8,
+    projetsRealises: 5,
     entreprises: ['Deezer', 'Vinted', 'Leboncoin']
   },
   {
@@ -175,7 +175,7 @@ const consultants = [
     tarifJournalier: '€390/jour',
     competences: ['Analyse Fonctionnelle', 'Gestion des Exigences', 'UML', 'BPMN'],
     experience: '10+ ans',
-    projetsRealises: 14,
+    projetsRealises: 9,
     entreprises: ['LCL', 'Crédit Mutuel', 'Banque Populaire']
   },
   {
@@ -186,7 +186,7 @@ const consultants = [
     tarifJournalier: '€370/jour',
     competences: ['Analyse des Processus', 'Modélisation', 'Gestion de Projet', 'SQL'],
     experience: '7+ ans',
-    projetsRealises: 11,
+    projetsRealises: 5,
     entreprises: ['La Poste', 'EDF', 'Veolia']
   },
   {
@@ -197,7 +197,7 @@ const consultants = [
     tarifJournalier: '€400/jour',
     competences: ['Product Strategy', 'Go-to-Market', 'Analytics', 'User Research'],
     experience: '9+ ans',
-    projetsRealises: 13,
+    projetsRealises: 8,
     entreprises: ['Carrefour', 'Auchan', 'Leclerc']
   },
   {
@@ -208,7 +208,7 @@ const consultants = [
     tarifJournalier: '€410/jour',
     competences: ['Apache Spark', 'Kafka', 'Hadoop', 'Python'],
     experience: '11+ ans',
-    projetsRealises: 16,
+    projetsRealises: 9,
     entreprises: ['Total', 'Engie', 'EDF']
   },
   {
@@ -219,7 +219,7 @@ const consultants = [
     tarifJournalier: '€420/jour',
     competences: ['Stratégie Digitale', 'Change Management', 'Process Optimization', 'Agile'],
     experience: '12+ ans',
-    projetsRealises: 18,
+    projetsRealises: 10,
     entreprises: ['BNP Paribas', 'Société Générale', 'Crédit Agricole']
   }
 ];
@@ -230,7 +230,7 @@ const FreelancerShowcase = () => {
 
   // Catégories de filtrage qui correspondent aux compétences réelles
   const allSkills = [
-    'Toutes',
+    'Tous',
     'Data & Analytics',
     'Management & PMO', 
     'Product & UX',
@@ -245,42 +245,67 @@ const FreelancerShowcase = () => {
     const competences = consultant.competences.join(' ').toLowerCase();
     const title = consultant.title.toLowerCase();
     
+    // Data & Analytics
     if (competences.includes('data') || competences.includes('analytics') || competences.includes('bi') || 
-        competences.includes('machine learning') || competences.includes('python') || competences.includes('sql')) {
+        competences.includes('machine learning') || competences.includes('python') || competences.includes('sql') ||
+        competences.includes('power bi') || competences.includes('tableau') || competences.includes('data modeling') ||
+        competences.includes('apache spark') || competences.includes('kafka') || competences.includes('hadoop')) {
       return 'Data & Analytics';
     }
+    
+    // Management & PMO
     if (competences.includes('gestion') || competences.includes('projet') || competences.includes('pmo') || 
-        competences.includes('scrum') || competences.includes('agile') || competences.includes('coaching')) {
+        competences.includes('scrum') || competences.includes('agile') || competences.includes('coaching') ||
+        competences.includes('transformation') || competences.includes('stratégie')) {
       return 'Management & PMO';
     }
+    
+    // Product & UX
     if (competences.includes('product') || competences.includes('ux') || competences.includes('ui') || 
-        competences.includes('user research') || competences.includes('roadmap')) {
+        competences.includes('user research') || competences.includes('roadmap') || competences.includes('go-to-market') ||
+        competences.includes('figma') || competences.includes('adobe xd') || competences.includes('prototyping')) {
       return 'Product & UX';
     }
+    
+    // Cybersécurité
     if (competences.includes('sécurité') || competences.includes('audit') || competences.includes('owasp') || 
-        competences.includes('tests pénétration')) {
+        competences.includes('tests pénétration') || competences.includes('conformité')) {
       return 'Cybersécurité';
     }
+    
+    // DevOps & Infrastructure
     if (competences.includes('devops') || competences.includes('aws') || competences.includes('docker') || 
-        competences.includes('kubernetes') || competences.includes('infrastructure')) {
+        competences.includes('kubernetes') || competences.includes('infrastructure') || competences.includes('terraform')) {
       return 'DevOps & Infrastructure';
     }
+    
+    // Développement
     if (competences.includes('react') || competences.includes('node.js') || competences.includes('typescript') || 
-        competences.includes('développement')) {
+        competences.includes('développement') || competences.includes('vue.js') || competences.includes('css3') ||
+        competences.includes('java') || competences.includes('spring boot') || competences.includes('postgresql') ||
+        competences.includes('react native') || competences.includes('flutter') || competences.includes('ios') ||
+        competences.includes('android')) {
       return 'Développement';
     }
+    
+    // Architecture
     if (competences.includes('architecture') || competences.includes('cloud') || competences.includes('microservices') || 
-        competences.includes('api design')) {
+        competences.includes('api design') || competences.includes('kafka')) {
       return 'Architecture';
     }
+    
+    // Business Analysis
     if (competences.includes('analyse métier') || competences.includes('uml') || competences.includes('bpmn') || 
-        competences.includes('exigences')) {
+        competences.includes('exigences') || competences.includes('analyse fonctionnelle') || 
+        competences.includes('gestion des exigences') || competences.includes('analyse des processus') ||
+        competences.includes('modélisation')) {
       return 'Business Analysis';
     }
+    
     return 'Autres';
   };
   
-  const filteredConsultants = selectedSkill === 'Toutes' 
+  const filteredConsultants = selectedSkill === 'Tous' 
     ? consultants 
     : consultants.filter(consultant => getConsultantCategory(consultant) === selectedSkill);
 
@@ -289,10 +314,10 @@ const FreelancerShowcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Nos Consultants
+            Exemples de profils
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Des profils rigoureusement sélectionnés, formés dans les grandes écoles françaises 
+            Rigoureusement sélectionnés, formés dans les grandes écoles françaises 
             et expérimentés dans l'écosystème tech français
           </p>
         </div>
@@ -300,9 +325,6 @@ const FreelancerShowcase = () => {
         {/* Filters */}
         <div className="mb-12">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-lg font-semibold text-gray-900">
-              {filteredConsultants.length} consultants disponibles
-            </h3>
             <button
               onClick={() => setShowFilters(!showFilters)}
               className="md:hidden flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200"
