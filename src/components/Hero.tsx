@@ -23,18 +23,6 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="flex items-center space-x-8">
-              <div className="flex items-center space-x-2">
-                <Star className="h-5 w-5 text-yellow-400 fill-current" />
-                <span className="text-gray-700 font-medium">4.9/5 Note Moyenne</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Users className="h-5 w-5 text-blue-600" />
-                <span className="text-gray-700 font-medium">500+ Consultants</span>
-              </div>
-            </div>
-
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-200 font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl">

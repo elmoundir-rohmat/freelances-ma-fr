@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import PriceComparison from './components/PriceComparison';
-import Services from './components/Services';
+import ServicesGrid from './components/ServicesGrid';
 import FreelancerShowcase from './components/FreelancerShowcase';
 import ClientSection from './components/ClientSection';
 import Testimonials from './components/Testimonials';
@@ -14,7 +14,7 @@ function App() {
       <Header />
       <Hero />
       <PriceComparison />
-      <Services />
+      <ServicesGrid />
       <FreelancerShowcase />
       <ClientSection />
       <Testimonials />

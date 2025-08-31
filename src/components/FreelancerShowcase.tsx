@@ -4,99 +4,223 @@ import { Star, MapPin, Clock, Filter } from 'lucide-react';
 const consultants = [
   {
     id: 1,
-    name: 'Sophie Laurent',
-    title: 'Développeuse Senior React',
-    location: 'Paris, France',
+    name: 'Sophie L.',
+    title: 'Data Scientist Senior',
     formation: 'CentraleSupélec',
-    rating: 4.9,
-    reviews: 127,
-    tarifJournalier: '€450/jour',
-    disponibilite: 'Disponible',
-    image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300',
-    competences: ['React', 'TypeScript', 'Node.js', 'GraphQL'],
+    tarifJournalier: '€380/jour',
+    competences: ['Python', 'Machine Learning', 'Data Analysis', 'SQL'],
     experience: '8+ ans',
-    projetsRealises: 45,
-    entreprises: ['Orange', 'BNP Paribas', 'StartupTech']
+    projetsRealises: 8,
+    entreprises: ['Orange', 'BNP Paribas', 'L\'Oréal']
   },
   {
     id: 2,
-    name: 'Marc Dubois',
-    title: 'Ingénieur DevOps',
-    location: 'Lyon, France',
+    name: 'Marc T-D.',
+    title: 'Consultant IT / PMO',
     formation: 'INSA Lyon',
-    rating: 5.0,
-    reviews: 89,
-    tarifJournalier: '€520/jour',
-    disponibilite: 'Disponible',
-    image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300',
-    competences: ['AWS', 'Docker', 'Kubernetes', 'Terraform'],
+    tarifJournalier: '€400/jour',
+    competences: ['Gestion de Projet', 'PMO', 'Transformation IT', 'Stratégie'],
     experience: '10+ ans',
-    projetsRealises: 67,
-    entreprises: ['Capgemini', 'Atos', 'StartupLyon']
+    projetsRealises: 12,
+    entreprises: ['SNCF', 'EDF', 'Engie']
   },
   {
     id: 3,
-    name: 'Amélie Chen',
-    title: 'Designer UX/UI',
-    location: 'Bordeaux, France',
-    formation: 'ESAD Bordeaux',
-    rating: 4.8,
-    reviews: 156,
+    name: 'Amélie C.',
+    title: 'Product Owner / Manager',
+    formation: 'ESCP Business School',
     tarifJournalier: '€380/jour',
-    disponibilite: 'Occupée jusqu\'au 15 jan',
-    image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300',
-    competences: ['Figma', 'Adobe XD', 'Prototypage', 'Recherche Utilisateur'],
+    competences: ['Product Strategy', 'Agile', 'User Research', 'Roadmap'],
     experience: '6+ ans',
-    projetsRealises: 83,
-    entreprises: ['Publicis', 'Havas', 'StartupBordeaux']
+    projetsRealises: 7,
+    entreprises: ['Carrefour', 'Danone', 'LVMH']
   },
   {
     id: 4,
-    name: 'Pierre Martin',
-    title: 'Développeur Full Stack',
-    location: 'Marseille, France',
+    name: 'Pierre M.',
+    title: 'Chef de Projet IT',
     formation: 'Polytech Marseille',
-    rating: 4.9,
-    reviews: 203,
-    tarifJournalier: '€480/jour',
-    disponibilite: 'Disponible',
-    image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=300',
-    competences: ['Python', 'Django', 'React', 'PostgreSQL'],
+    tarifJournalier: '€420/jour',
+    competences: ['Gestion de Projet', 'AMOA', 'Agile', 'Stakeholder Management'],
     experience: '12+ ans',
-    projetsRealises: 92,
-    entreprises: ['Sopra Steria', 'Accenture', 'StartupMarseille']
+    projetsRealises: 10,
+    entreprises: ['Air France', 'CMA CGM', 'Bouygues']
   },
   {
     id: 5,
-    name: 'Emma Rodriguez',
-    title: 'Développeuse Mobile',
-    location: 'Nice, France',
+    name: 'Emma R.',
+    title: 'Spécialiste Cybersécurité',
     formation: 'Epitech Nice',
-    rating: 4.7,
-    reviews: 94,
-    tarifJournalier: '€420/jour',
-    disponibilite: 'Disponible',
-    image: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=300',
-    competences: ['React Native', 'Flutter', 'iOS', 'Android'],
+    tarifJournalier: '€400/jour',
+    competences: ['Audit Sécurité', 'Tests Pénétration', 'OWASP', 'Conformité'],
     experience: '7+ ans',
-    projetsRealises: 38,
-    entreprises: ['Capgemini', 'Sopra Steria', 'StartupNice']
+    projetsRealises: 6,
+    entreprises: ['Société Générale', 'Crédit Agricole', 'AXA']
   },
   {
     id: 6,
-    name: 'Lucas Moreau',
-    title: 'Spécialiste Cybersécurité',
-    location: 'Toulouse, France',
+    name: 'Lucas M.',
+    title: 'DevOps & Infrastructure',
     formation: 'ENSEEIHT',
-    rating: 5.0,
-    reviews: 76,
-    tarifJournalier: '€580/jour',
-    disponibilite: 'Disponible',
-    image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300',
-    competences: ['Tests Pénétration', 'OWASP', 'Audit Sécurité', 'Conformité'],
+    tarifJournalier: '€350/jour',
+    competences: ['AWS', 'Docker', 'Kubernetes', 'Terraform'],
     experience: '9+ ans',
-    projetsRealises: 54,
-    entreprises: ['Thales', 'Airbus', 'StartupToulouse']
+    projetsRealises: 9,
+    entreprises: ['Thales', 'Airbus', 'Dassault Systèmes']
+  },
+  {
+    id: 7,
+    name: 'Thomas B.',
+    title: 'Développeur Full-Stack',
+    formation: 'EPITA',
+    tarifJournalier: '€350/jour',
+    competences: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],
+    experience: '5+ ans',
+    projetsRealises: 8,
+    entreprises: ['Ubisoft', 'Criteo', 'BlaBlaCar']
+  },
+  {
+    id: 8,
+    name: 'Julie P.',
+    title: 'Architecte Solution',
+    formation: 'Télécom Paris',
+    tarifJournalier: '€420/jour',
+    competences: ['Architecture Cloud', 'Microservices', 'API Design', 'Kafka'],
+    experience: '11+ ans',
+    projetsRealises: 15,
+    entreprises: ['Renault', 'PSA', 'Valeo']
+  },
+  {
+    id: 9,
+    name: 'Antoine F.',
+    title: 'Scrum Master / Coach Agile',
+    formation: 'HEC Paris',
+    tarifJournalier: '€380/jour',
+    competences: ['Scrum', 'Kanban', 'Coaching', 'Transformation Agile'],
+    experience: '8+ ans',
+    projetsRealises: 11,
+    entreprises: ['L\'Oréal', 'Sanofi', 'Essilor']
+  },
+  {
+    id: 10,
+    name: 'Marie L.',
+    title: 'Business Analyst',
+    formation: 'Sciences Po Paris',
+    tarifJournalier: '€360/jour',
+    competences: ['Analyse Métier', 'UML', 'BPMN', 'Gestion des Exigences'],
+    experience: '6+ ans',
+    projetsRealises: 9,
+    entreprises: ['BNP Paribas', 'Crédit Agricole', 'Société Générale']
+  },
+  {
+    id: 11,
+    name: 'Nicolas R.',
+    title: 'Expert BI & Analytics',
+    formation: 'ENSAE Paris',
+    tarifJournalier: '€400/jour',
+    competences: ['Power BI', 'Tableau', 'SQL', 'Data Modeling'],
+    experience: '9+ ans',
+    projetsRealises: 13,
+    entreprises: ['Total', 'Engie', 'EDF']
+  },
+  {
+    id: 12,
+    name: 'Camille D.',
+    title: 'UX/UI Designer',
+    formation: 'ESAD Reims',
+    tarifJournalier: '€360/jour',
+    competences: ['Figma', 'Adobe XD', 'User Research', 'Prototyping'],
+    experience: '7+ ans',
+    projetsRealises: 10,
+    entreprises: ['Decathlon', 'Fnac', 'Boulanger']
+  },
+  {
+    id: 13,
+    name: 'Alexandre M.',
+    title: 'Développeur Frontend Senior',
+    formation: '42 Paris',
+    tarifJournalier: '€370/jour',
+    competences: ['React', 'Vue.js', 'TypeScript', 'CSS3/Sass'],
+    experience: '8+ ans',
+    projetsRealises: 12,
+    entreprises: ['Doctolib', 'Back Market', 'Veepee']
+  },
+  {
+    id: 14,
+    name: 'Sarah K.',
+    title: 'Développeuse Backend',
+    formation: 'IMT Atlantique',
+    tarifJournalier: '€360/jour',
+    competences: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis'],
+    experience: '6+ ans',
+    projetsRealises: 9,
+    entreprises: ['Orange', 'Bouygues Telecom', 'SFR']
+  },
+  {
+    id: 15,
+    name: 'Raphaël T.',
+    title: 'Développeur Mobile',
+    formation: 'Epitech Paris',
+    tarifJournalier: '€350/jour',
+    competences: ['React Native', 'Flutter', 'iOS', 'Android'],
+    experience: '5+ ans',
+    projetsRealises: 8,
+    entreprises: ['Deezer', 'Vinted', 'Leboncoin']
+  },
+  {
+    id: 16,
+    name: 'Claire B.',
+    title: 'Business Analyst Senior',
+    formation: 'EM Lyon',
+    tarifJournalier: '€390/jour',
+    competences: ['Analyse Fonctionnelle', 'Gestion des Exigences', 'UML', 'BPMN'],
+    experience: '10+ ans',
+    projetsRealises: 14,
+    entreprises: ['LCL', 'Crédit Mutuel', 'Banque Populaire']
+  },
+  {
+    id: 17,
+    name: 'Guillaume L.',
+    title: 'Analyste Métier IT',
+    formation: 'Grenoble INP',
+    tarifJournalier: '€370/jour',
+    competences: ['Analyse des Processus', 'Modélisation', 'Gestion de Projet', 'SQL'],
+    experience: '7+ ans',
+    projetsRealises: 11,
+    entreprises: ['La Poste', 'EDF', 'Veolia']
+  },
+  {
+    id: 18,
+    name: 'Isabelle R.',
+    title: 'Product Manager',
+    formation: 'ESSEC Business School',
+    tarifJournalier: '€400/jour',
+    competences: ['Product Strategy', 'Go-to-Market', 'Analytics', 'User Research'],
+    experience: '9+ ans',
+    projetsRealises: 13,
+    entreprises: ['Carrefour', 'Auchan', 'Leclerc']
+  },
+  {
+    id: 19,
+    name: 'Matthieu D.',
+    title: 'Expert Data Engineering',
+    formation: 'Mines ParisTech',
+    tarifJournalier: '€410/jour',
+    competences: ['Apache Spark', 'Kafka', 'Hadoop', 'Python'],
+    experience: '11+ ans',
+    projetsRealises: 16,
+    entreprises: ['Total', 'Engie', 'EDF']
+  },
+  {
+    id: 20,
+    name: 'Audrey S.',
+    title: 'Consultante Transformation Digitale',
+    formation: 'HEC Paris',
+    tarifJournalier: '€420/jour',
+    competences: ['Stratégie Digitale', 'Change Management', 'Process Optimization', 'Agile'],
+    experience: '12+ ans',
+    projetsRealises: 18,
+    entreprises: ['BNP Paribas', 'Société Générale', 'Crédit Agricole']
   }
 ];
 
@@ -104,23 +228,71 @@ const FreelancerShowcase = () => {
   const [selectedSkill, setSelectedSkill] = useState('Toutes');
   const [showFilters, setShowFilters] = useState(false);
 
-  const allSkills = ['Toutes', 'React', 'Python', 'AWS', 'Figma', 'Node.js', 'TypeScript'];
+  // Catégories de filtrage qui correspondent aux compétences réelles
+  const allSkills = [
+    'Toutes',
+    'Data & Analytics',
+    'Management & PMO', 
+    'Product & UX',
+    'Cybersécurité',
+    'DevOps & Infrastructure',
+    'Développement',
+    'Architecture',
+    'Business Analysis'
+  ];
+  
+  const getConsultantCategory = (consultant: any) => {
+    const competences = consultant.competences.join(' ').toLowerCase();
+    const title = consultant.title.toLowerCase();
+    
+    if (competences.includes('data') || competences.includes('analytics') || competences.includes('bi') || 
+        competences.includes('machine learning') || competences.includes('python') || competences.includes('sql')) {
+      return 'Data & Analytics';
+    }
+    if (competences.includes('gestion') || competences.includes('projet') || competences.includes('pmo') || 
+        competences.includes('scrum') || competences.includes('agile') || competences.includes('coaching')) {
+      return 'Management & PMO';
+    }
+    if (competences.includes('product') || competences.includes('ux') || competences.includes('ui') || 
+        competences.includes('user research') || competences.includes('roadmap')) {
+      return 'Product & UX';
+    }
+    if (competences.includes('sécurité') || competences.includes('audit') || competences.includes('owasp') || 
+        competences.includes('tests pénétration')) {
+      return 'Cybersécurité';
+    }
+    if (competences.includes('devops') || competences.includes('aws') || competences.includes('docker') || 
+        competences.includes('kubernetes') || competences.includes('infrastructure')) {
+      return 'DevOps & Infrastructure';
+    }
+    if (competences.includes('react') || competences.includes('node.js') || competences.includes('typescript') || 
+        competences.includes('développement')) {
+      return 'Développement';
+    }
+    if (competences.includes('architecture') || competences.includes('cloud') || competences.includes('microservices') || 
+        competences.includes('api design')) {
+      return 'Architecture';
+    }
+    if (competences.includes('analyse métier') || competences.includes('uml') || competences.includes('bpmn') || 
+        competences.includes('exigences')) {
+      return 'Business Analysis';
+    }
+    return 'Autres';
+  };
   
   const filteredConsultants = selectedSkill === 'Toutes' 
     ? consultants 
-    : consultants.filter(consultant => 
-        consultant.competences.some(skill => skill.toLowerCase().includes(selectedSkill.toLowerCase()))
-      );
+    : consultants.filter(consultant => getConsultantCategory(consultant) === selectedSkill);
 
   return (
     <section id="consultants" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Nos Consultants d'Excellence
+            Nos Consultants
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Des professionnels rigoureusement sélectionnés, formés dans les grandes écoles françaises 
+            Des profils rigoureusement sélectionnés, formés dans les grandes écoles françaises 
             et expérimentés dans l'écosystème tech français
           </p>
         </div>
@@ -169,21 +341,15 @@ const FreelancerShowcase = () => {
               {/* Profile Header */}
               <div className="p-6 pb-4">
                 <div className="flex items-start space-x-4">
-                  <img
-                    src={consultant.image}
-                    alt={consultant.name}
-                    className="w-16 h-16 rounded-full object-cover"
-                  />
+                  <div className="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center text-white text-lg font-bold">
+                    {consultant.name.split(' ').map(word => word[0]).join('').toUpperCase()}
+                  </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                       {consultant.name}
                     </h3>
                     <p className="text-gray-600 font-medium">{consultant.title}</p>
                     <p className="text-sm text-blue-600 font-medium">{consultant.formation}</p>
-                    <div className="flex items-center space-x-1 mt-1">
-                      <MapPin className="h-4 w-4 text-gray-400" />
-                      <span className="text-sm text-gray-500">{consultant.location}</span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -191,24 +357,9 @@ const FreelancerShowcase = () => {
               {/* Stats */}
               <div className="px-6 pb-4">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-1">
-                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                    <span className="font-semibold text-gray-900">{consultant.rating}</span>
-                    <span className="text-sm text-gray-500">({consultant.reviews} avis)</span>
+                  <div className="text-sm text-gray-600">
+                    {consultant.experience} • {consultant.projetsRealises} projets
                   </div>
-                  <div className="flex items-center space-x-1">
-                    <Clock className="h-4 w-4 text-gray-400" />
-                    <span className={`text-sm font-medium ${
-                      consultant.disponibilite === 'Disponible' ? 'text-green-600' : 'text-orange-600'
-                    }`}>
-                      {consultant.disponibilite}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex justify-between text-sm text-gray-600 mb-4">
-                  <span>{consultant.experience}</span>
-                  <span>{consultant.projetsRealises} projets</span>
                 </div>
               </div>
 
@@ -221,6 +372,21 @@ const FreelancerShowcase = () => {
                       className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-md font-medium"
                     >
                       {competence}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Entreprises */}
+              <div className="px-6 pb-4">
+                <p className="text-xs text-gray-500 mb-2">Expérience chez :</p>
+                <div className="flex flex-wrap gap-2">
+                  {consultant.entreprises.map((entreprise, index) => (
+                    <span
+                      key={index}
+                      className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-md font-medium"
+                    >
+                      {entreprise}
                     </span>
                   ))}
                 </div>
