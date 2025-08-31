@@ -11,7 +11,7 @@ const consultants = [
     competences: ['Python', 'Machine Learning', 'Data Analysis', 'SQL'],
     experience: '8+ ans',
     projetsRealises: 5,
-    entreprises: ['Orange', 'BNP Paribas', 'L\'Oréal']
+    entreprises: ['Télécoms', 'Banque', 'Luxe']
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const consultants = [
     competences: ['Gestion de Projet', 'PMO', 'Transformation IT', 'Stratégie'],
     experience: '10+ ans',
     projetsRealises: 7,
-    entreprises: ['SNCF', 'EDF', 'Engie']
+    entreprises: ['Transport', 'Énergie', 'Services Publics']
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const consultants = [
     competences: ['Product Strategy', 'Agile', 'User Research', 'Roadmap'],
     experience: '6+ ans',
     projetsRealises: 7,
-    entreprises: ['Carrefour', 'Danone', 'LVMH']
+    entreprises: ['Distribution', 'Agroalimentaire', 'Luxe']
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const consultants = [
     competences: ['Gestion de Projet', 'AMOA', 'Agile', 'Stakeholder Management'],
     experience: '12+ ans',
     projetsRealises: 8,
-    entreprises: ['Air France', 'CMA CGM', 'Bouygues']
+    entreprises: ['Transport Aérien', 'Logistique', 'BTP']
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const consultants = [
     competences: ['Audit Sécurité', 'Tests Pénétration', 'OWASP', 'Conformité'],
     experience: '7+ ans',
     projetsRealises: 3,
-    entreprises: ['Société Générale', 'Crédit Agricole', 'AXA']
+    entreprises: ['Banque', 'Assurance', 'Finance']
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ const consultants = [
     competences: ['AWS', 'Docker', 'Kubernetes', 'Terraform'],
     experience: '9+ ans',
     projetsRealises: 6,
-    entreprises: ['Thales', 'Airbus', 'Dassault Systèmes']
+    entreprises: ['Aéronautique', 'Défense', 'Technologies']
   },
   {
     id: 7,
@@ -77,7 +77,7 @@ const consultants = [
     competences: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],
     experience: '5+ ans',
     projetsRealises: 3,
-    entreprises: ['Ubisoft', 'Criteo', 'BlaBlaCar']
+    entreprises: ['Gaming', 'Tech', 'Mobilité']
   },
   {
     id: 8,
@@ -88,7 +88,7 @@ const consultants = [
     competences: ['Architecture Cloud', 'Microservices', 'API Design', 'Kafka'],
     experience: '11+ ans',
     projetsRealises: 5,
-    entreprises: ['Renault', 'PSA', 'Valeo']
+    entreprises: ['Automobile', 'Industrie', 'Manufacturing']
   },
   {
     id: 9,
@@ -99,7 +99,7 @@ const consultants = [
     competences: ['Scrum', 'Kanban', 'Coaching', 'Transformation Agile'],
     experience: '8+ ans',
     projetsRealises: 5,
-    entreprises: ['L\'Oréal', 'Sanofi', 'Essilor']
+    entreprises: ['Luxe', 'Pharma', 'Optique']
   },
   {
     id: 10,
@@ -110,7 +110,7 @@ const consultants = [
     competences: ['Analyse Métier', 'UML', 'BPMN', 'Gestion des Exigences'],
     experience: '6+ ans',
     projetsRealises: 4,
-    entreprises: ['BNP Paribas', 'Crédit Agricole', 'Société Générale']
+    entreprises: ['Banque', 'Finance', 'Services Financiers']
   },
   {
     id: 11,
@@ -121,7 +121,7 @@ const consultants = [
     competences: ['Power BI', 'Tableau', 'SQL', 'Data Modeling'],
     experience: '9+ ans',
     projetsRealises: 7,
-    entreprises: ['Total', 'Engie', 'EDF']
+    entreprises: ['Énergie', 'Pétrole', 'Services Publics']
   },
   {
     id: 12,
@@ -132,7 +132,7 @@ const consultants = [
     competences: ['Figma', 'Adobe XD', 'User Research', 'Prototyping'],
     experience: '7+ ans',
     projetsRealises: 7,
-    entreprises: ['Decathlon', 'Fnac', 'Boulanger']
+    entreprises: ['Retail', 'E-commerce', 'Distribution']
   },
   {
     id: 13,
@@ -143,7 +143,7 @@ const consultants = [
     competences: ['React', 'Vue.js', 'TypeScript', 'CSS3/Sass'],
     experience: '8+ ans',
     projetsRealises: 9,
-    entreprises: ['Doctolib', 'Back Market', 'Veepee']
+    entreprises: ['Santé', 'Tech', 'Marketplace']
   },
   {
     id: 14,
@@ -154,7 +154,7 @@ const consultants = [
     competences: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis'],
     experience: '6+ ans',
     projetsRealises: 5,
-    entreprises: ['Orange', 'Bouygues Telecom', 'SFR']
+    entreprises: ['Télécoms', 'Tech', 'Services']
   },
   {
     id: 15,
@@ -165,7 +165,7 @@ const consultants = [
     competences: ['React Native', 'Flutter', 'iOS', 'Android'],
     experience: '5+ ans',
     projetsRealises: 5,
-    entreprises: ['Deezer', 'Vinted', 'Leboncoin']
+    entreprises: ['Média', 'Marketplace', 'E-commerce']
   },
   {
     id: 16,
@@ -176,7 +176,7 @@ const consultants = [
     competences: ['Analyse Fonctionnelle', 'Gestion des Exigences', 'UML', 'BPMN'],
     experience: '10+ ans',
     projetsRealises: 9,
-    entreprises: ['LCL', 'Crédit Mutuel', 'Banque Populaire']
+    entreprises: ['Banque', 'Finance', 'Services Financiers']
   },
   {
     id: 17,
@@ -187,7 +187,7 @@ const consultants = [
     competences: ['Analyse des Processus', 'Modélisation', 'Gestion de Projet', 'SQL'],
     experience: '7+ ans',
     projetsRealises: 5,
-    entreprises: ['La Poste', 'EDF', 'Veolia']
+    entreprises: ['Services Publics', 'Énergie', 'Environnement']
   },
   {
     id: 18,
@@ -198,7 +198,7 @@ const consultants = [
     competences: ['Product Strategy', 'Go-to-Market', 'Analytics', 'User Research'],
     experience: '9+ ans',
     projetsRealises: 8,
-    entreprises: ['Carrefour', 'Auchan', 'Leclerc']
+    entreprises: ['Retail', 'Distribution', 'E-commerce']
   },
   {
     id: 19,
@@ -209,7 +209,7 @@ const consultants = [
     competences: ['Apache Spark', 'Kafka', 'Hadoop', 'Python'],
     experience: '11+ ans',
     projetsRealises: 9,
-    entreprises: ['Total', 'Engie', 'EDF']
+    entreprises: ['Énergie', 'Pétrole', 'Services Publics']
   },
   {
     id: 20,
@@ -220,13 +220,14 @@ const consultants = [
     competences: ['Stratégie Digitale', 'Change Management', 'Process Optimization', 'Agile'],
     experience: '12+ ans',
     projetsRealises: 10,
-    entreprises: ['BNP Paribas', 'Société Générale', 'Crédit Agricole']
+    entreprises: ['Banque', 'Finance', 'Services Financiers']
   }
 ];
 
 const FreelancerShowcase = () => {
   const [selectedSkill, setSelectedSkill] = useState('Tous');
   const [showFilters, setShowFilters] = useState(false);
+  const [showAllConsultants, setShowAllConsultants] = useState(false);
 
   // Catégories de filtrage qui correspondent aux compétences réelles
   const allSkills = [
@@ -309,6 +310,9 @@ const FreelancerShowcase = () => {
     ? consultants 
     : consultants.filter(consultant => getConsultantCategory(consultant) === selectedSkill);
 
+  // Limiter l'affichage à 6 consultants par défaut
+  const displayedConsultants = showAllConsultants ? filteredConsultants : filteredConsultants.slice(0, 6);
+
   return (
     <section id="consultants" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -355,7 +359,7 @@ const FreelancerShowcase = () => {
 
         {/* Consultant Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredConsultants.map((consultant) => (
+          {displayedConsultants.map((consultant) => (
             <div
               key={consultant.id}
               className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer group border border-gray-100"
@@ -367,9 +371,6 @@ const FreelancerShowcase = () => {
                     {consultant.name.split(' ').map(word => word[0]).join('').toUpperCase()}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                      {consultant.name}
-                    </h3>
                     <p className="text-gray-600 font-medium">{consultant.title}</p>
                     <p className="text-sm text-blue-600 font-medium">{consultant.formation}</p>
                   </div>
@@ -401,7 +402,7 @@ const FreelancerShowcase = () => {
 
               {/* Entreprises */}
               <div className="px-6 pb-4">
-                <p className="text-xs text-gray-500 mb-2">Expérience chez :</p>
+                <p className="text-xs text-gray-500 mb-2">Expérience dans :</p>
                 <div className="flex flex-wrap gap-2">
                   {consultant.entreprises.map((entreprise, index) => (
                     <span
@@ -427,8 +428,11 @@ const FreelancerShowcase = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-200 font-semibold">
-            Voir Tous les Consultants
+          <button 
+            onClick={() => setShowAllConsultants(!showAllConsultants)}
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-200 font-semibold"
+          >
+            {showAllConsultants ? 'Voir moins' : 'Voir plus'}
           </button>
         </div>
       </div>
