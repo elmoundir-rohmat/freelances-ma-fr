@@ -6,7 +6,7 @@ const consultants = [
     id: 1,
     name: 'Sophie L.',
     title: 'Data Scientist Senior',
-    formation: 'CentraleSupélec',
+    formation: 'ESIEE Paris',
     tarifJournalier: '€380/jour',
     competences: ['Python', 'Machine Learning', 'Data Analysis', 'SQL'],
     experience: '8+ ans',
@@ -83,7 +83,7 @@ const consultants = [
     id: 8,
     name: 'Julie P.',
     title: 'Architecte Solution',
-    formation: 'Télécom Paris',
+    formation: 'IMT Atlantique',
     tarifJournalier: '€420/jour',
     competences: ['Architecture Cloud', 'Microservices', 'API Design', 'Kafka'],
     experience: '11+ ans',
@@ -94,7 +94,7 @@ const consultants = [
     id: 9,
     name: 'Antoine F.',
     title: 'Scrum Master / Coach Agile',
-    formation: 'HEC Paris',
+    formation: 'EM Strasbourg',
     tarifJournalier: '€380/jour',
     competences: ['Scrum', 'Kanban', 'Coaching', 'Transformation Agile'],
     experience: '8+ ans',
@@ -105,7 +105,7 @@ const consultants = [
     id: 10,
     name: 'Marie L.',
     title: 'Business Analyst',
-    formation: 'Sciences Po Paris',
+    formation: 'IEP Aix-en-Provence',
     tarifJournalier: '€360/jour',
     competences: ['Analyse Métier', 'UML', 'BPMN', 'Gestion des Exigences'],
     experience: '6+ ans',
@@ -116,7 +116,7 @@ const consultants = [
     id: 11,
     name: 'Nicolas R.',
     title: 'Expert BI & Analytics',
-    formation: 'ENSAE Paris',
+    formation: 'ENSAI Rennes',
     tarifJournalier: '€400/jour',
     competences: ['Power BI', 'Tableau', 'SQL', 'Data Modeling'],
     experience: '9+ ans',
@@ -138,7 +138,7 @@ const consultants = [
     id: 13,
     name: 'Alexandre M.',
     title: 'Développeur Frontend Senior',
-    formation: '42 Paris',
+    formation: 'Epitech Paris',
     tarifJournalier: '€370/jour',
     competences: ['React', 'Vue.js', 'TypeScript', 'CSS3/Sass'],
     experience: '8+ ans',
@@ -193,7 +193,7 @@ const consultants = [
     id: 18,
     name: 'Isabelle R.',
     title: 'Product Manager',
-    formation: 'ESSEC Business School',
+    formation: 'EM Normandie',
     tarifJournalier: '€400/jour',
     competences: ['Product Strategy', 'Go-to-Market', 'Analytics', 'User Research'],
     experience: '9+ ans',
@@ -204,7 +204,7 @@ const consultants = [
     id: 19,
     name: 'Matthieu D.',
     title: 'Expert Data Engineering',
-    formation: 'Mines ParisTech',
+    formation: 'IMT Mines Alès',
     tarifJournalier: '€410/jour',
     competences: ['Apache Spark', 'Kafka', 'Hadoop', 'Python'],
     experience: '11+ ans',
@@ -215,7 +215,7 @@ const consultants = [
     id: 20,
     name: 'Audrey S.',
     title: 'Consultante Transformation Digitale',
-    formation: 'HEC Paris',
+    formation: 'EM Lyon',
     tarifJournalier: '€420/jour',
     competences: ['Stratégie Digitale', 'Change Management', 'Process Optimization', 'Agile'],
     experience: '12+ ans',
@@ -225,7 +225,7 @@ const consultants = [
 ];
 
 const FreelancerShowcase = () => {
-  const [selectedSkill, setSelectedSkill] = useState('Toutes');
+  const [selectedSkill, setSelectedSkill] = useState('Tous');
   const [showFilters, setShowFilters] = useState(false);
 
   // Catégories de filtrage qui correspondent aux compétences réelles
