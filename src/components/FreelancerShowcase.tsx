@@ -4,58 +4,58 @@ import { Star, MapPin, Clock, Filter } from 'lucide-react';
 const consultants = [
   {
     id: 1,
-    name: 'Sophie L.',
-    title: 'Data Scientist Senior',
-    formation: 'ESIEE Paris',
-    tarifJournalier: '€380/jour',
-    competences: ['Python', 'Machine Learning', 'Data Analysis', 'SQL'],
-    experience: '8+ ans',
-    projetsRealises: 5,
-    entreprises: ['Télécoms', 'Banque', 'Luxe']
+    name: 'Jihane N.',
+    title: 'SAP Project Manager',
+    formation: 'Mines de Saint-Etienne',
+    tarifJournalier: '€450/jour',
+    competences: ['ERP', 'SAP PP/QM/MM/EWM', 'SAP S/4HANA', 'AMOA'],
+    experience: '11+ ans',
+    projetsRealises: 7,
+    entreprises: ['Pharma', 'Défense', 'Luxe', 'Automobile']
   },
   {
     id: 2,
-    name: 'Marc T-D.',
-    title: 'Consultant IT / PMO',
-    formation: 'INSA Lyon',
-    tarifJournalier: '€400/jour',
-    competences: ['Gestion de Projet', 'PMO', 'Transformation IT', 'Stratégie'],
+    name: 'Ayoub Q.',
+    title: 'Consultant Data',
+    formation: 'IMT Atlantique',
+    tarifJournalier: '€350/jour',
+    competences: ['Data Gouvernance', 'Référentiels', 'Talend/Tableau/Power BI'],
     experience: '10+ ans',
-    projetsRealises: 7,
-    entreprises: ['Transport', 'Énergie', 'Services Publics']
+    projetsRealises: 5,
+    entreprises: ['Luxe', 'Énergie', 'Télécoms', 'BTP']
   },
   {
     id: 3,
-    name: 'Amélie C.',
+    name: 'Walid B.',
     title: 'Product Owner / Manager',
-    formation: 'ESCP Business School',
-    tarifJournalier: '€380/jour',
-    competences: ['Product Strategy', 'Agile', 'User Research', 'Roadmap'],
-    experience: '6+ ans',
-    projetsRealises: 7,
-    entreprises: ['Distribution', 'Agroalimentaire', 'Luxe']
+    formation: 'NOEMA Business School',
+    tarifJournalier: '€320/jour',
+    competences: ['Pilotage de projets', 'Agile', 'User Stories', 'Roadmap'],
+    experience: '9+ ans',
+    projetsRealises: 5,
+    entreprises: ['Distribution', 'Banque', 'Start-up']
   },
   {
     id: 4,
-    name: 'Pierre M.',
-    title: 'Chef de Projet IT',
-    formation: 'Polytech Marseille',
-    tarifJournalier: '€420/jour',
-    competences: ['Gestion de Projet', 'AMOA', 'Agile', 'Stakeholder Management'],
-    experience: '12+ ans',
-    projetsRealises: 8,
-    entreprises: ['Transport Aérien', 'Logistique', 'BTP']
+    name: 'Ryadh S.',
+    title: 'PMO / Chef de projet IT',
+    formation: 'IMT Atlantique',
+    tarifJournalier: '€350/jour',
+    competences: ['Gestion de Projet', 'IA', 'Agile', 'Stakeholder Management'],
+    experience: '10+ ans',
+    projetsRealises: 5,
+    entreprises: ['Télécoms', 'Luxe', 'Start-up', 'Energie']
   },
   {
     id: 5,
-    name: 'Emma R.',
-    title: 'Spécialiste Cybersécurité',
-    formation: 'Epitech Nice',
-    tarifJournalier: '€400/jour',
-    competences: ['Audit Sécurité', 'Tests Pénétration', 'OWASP', 'Conformité'],
-    experience: '7+ ans',
-    projetsRealises: 3,
-    entreprises: ['Banque', 'Assurance', 'Finance']
+    name: 'Anas B.',
+    title: 'Product Manager',
+    formation: 'IMT Atlantique',
+    tarifJournalier: '€350/jour',
+    competences: ['Product Stratégie', 'Roadmap', 'Go-to-Market', 'Agile'],
+    experience: '11+ ans',
+    projetsRealises: 8,
+    entreprises: ['Télécoms', 'Fintech', 'Distribution']
   },
   {
     id: 6,
@@ -73,7 +73,7 @@ const consultants = [
     name: 'Thomas B.',
     title: 'Développeur Full-Stack',
     formation: 'EPITA',
-    tarifJournalier: '€350/jour',
+    tarifJournalier: '€320/jour',
     competences: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],
     experience: '5+ ans',
     projetsRealises: 3,
@@ -84,7 +84,7 @@ const consultants = [
     name: 'Julie P.',
     title: 'Architecte Solution',
     formation: 'IMT Atlantique',
-    tarifJournalier: '€420/jour',
+    tarifJournalier: '€450/jour',
     competences: ['Architecture Cloud', 'Microservices', 'API Design', 'Kafka'],
     experience: '11+ ans',
     projetsRealises: 5,
@@ -95,7 +95,7 @@ const consultants = [
     name: 'Antoine F.',
     title: 'Scrum Master / Coach Agile',
     formation: 'EM Strasbourg',
-    tarifJournalier: '€380/jour',
+    tarifJournalier: '€330/jour',
     competences: ['Scrum', 'Kanban', 'Coaching', 'Transformation Agile'],
     experience: '8+ ans',
     projetsRealises: 5,
@@ -117,7 +117,7 @@ const consultants = [
     name: 'Nicolas R.',
     title: 'Expert BI & Analytics',
     formation: 'ENSAI Rennes',
-    tarifJournalier: '€400/jour',
+    tarifJournalier: '€370/jour',
     competences: ['Power BI', 'Tableau', 'SQL', 'Data Modeling'],
     experience: '9+ ans',
     projetsRealises: 7,
@@ -195,7 +195,7 @@ const consultants = [
     title: 'Product Manager',
     formation: 'EM Normandie',
     tarifJournalier: '€400/jour',
-    competences: ['Product Strategy', 'Go-to-Market', 'Analytics', 'User Research'],
+    competences: ['Product Strategy', 'Go-to-Market', 'User Research'],
     experience: '9+ ans',
     projetsRealises: 8,
     entreprises: ['Retail', 'Distribution', 'E-commerce']
@@ -205,7 +205,7 @@ const consultants = [
     name: 'Matthieu D.',
     title: 'Expert Data Engineering',
     formation: 'IMT Mines Alès',
-    tarifJournalier: '€410/jour',
+    tarifJournalier: '€450/jour',
     competences: ['Apache Spark', 'Kafka', 'Hadoop', 'Python'],
     experience: '11+ ans',
     projetsRealises: 9,
@@ -216,11 +216,33 @@ const consultants = [
     name: 'Audrey S.',
     title: 'Consultante Transformation Digitale',
     formation: 'EM Lyon',
-    tarifJournalier: '€420/jour',
+    tarifJournalier: '€390/jour',
     competences: ['Stratégie Digitale', 'Change Management', 'Process Optimization', 'Agile'],
-    experience: '12+ ans',
-    projetsRealises: 10,
+    experience: '10+ ans',
+    projetsRealises: 6,
     entreprises: ['Banque', 'Finance', 'Services Financiers']
+  },
+  {
+    id: 21,
+    name: 'Julien C.',
+    title: 'Expert Cybersécurité',
+    formation: 'Télécom SudParis',
+    tarifJournalier: '€400/jour',
+    competences: ['Audit Sécurité', 'Tests Pénétration', 'ISO 27001', 'Conformité RGPD'],
+    experience: '8+ ans',
+    projetsRealises: 6,
+    entreprises: ['Banque', 'Assurance', 'Services Financiers']
+  },
+  {
+    id: 22,
+    name: 'Léa M.',
+    title: 'Consultante Cybersécurité',
+    formation: 'EPITA',
+    tarifJournalier: '€340/jour',
+    competences: ['Risk Assessment', 'Security Architecture', 'Incident Response', 'NIST'],
+    experience: '6+ ans',
+    projetsRealises: 4,
+    entreprises: ['Technologies', 'Défense', 'Services Publics']
   }
 ];
 
@@ -246,61 +268,70 @@ const FreelancerShowcase = () => {
     const competences = consultant.competences.join(' ').toLowerCase();
     const title = consultant.title.toLowerCase();
     
+    // Développement (priorité haute - vérifier d'abord les titres)
+    if (title.includes('développeur') || title.includes('développeuse') || 
+        competences.includes('react') || competences.includes('node.js') || competences.includes('typescript') ||
+        competences.includes('vue.js') || competences.includes('css3') || competences.includes('sass') ||
+        competences.includes('java') || competences.includes('spring boot') || 
+        competences.includes('react native') || competences.includes('flutter') || competences.includes('ios') ||
+        competences.includes('android') || competences.includes('postgresql')) {
+      return 'Développement';
+    }
+    
     // Data & Analytics
-    if (competences.includes('data') || competences.includes('analytics') || competences.includes('bi') || 
-        competences.includes('machine learning') || competences.includes('python') || competences.includes('sql') ||
+    if (title.includes('data') || title.includes('analytics') || title.includes('bi') ||
+        competences.includes('data') || competences.includes('analytics') || competences.includes('bi') || 
+        competences.includes('machine learning') || competences.includes('python') ||
         competences.includes('power bi') || competences.includes('tableau') || competences.includes('data modeling') ||
-        competences.includes('apache spark') || competences.includes('kafka') || competences.includes('hadoop')) {
+        competences.includes('apache spark') || competences.includes('hadoop')) {
       return 'Data & Analytics';
     }
     
+    // Product & UX (priorité haute - avant Management)
+    if (title.includes('product') || title.includes('ux') || title.includes('ui') || title.includes('product owner') ||
+        competences.includes('product') || competences.includes('ux') || competences.includes('ui') || 
+        competences.includes('user research') || competences.includes('roadmap') || competences.includes('go-to-market') ||
+        competences.includes('figma') || competences.includes('adobe xd') || competences.includes('prototyping') ||
+        competences.includes('product strategy') || competences.includes('analytics') || competences.includes('user research')) {
+      return 'Product & UX';
+    }
+    
+    // Business Analysis (priorité haute - avant Management)
+    if (title.includes('business analyst') || title.includes('analyste métier') ||
+        competences.includes('analyse métier') || competences.includes('uml') || competences.includes('bpmn') || 
+        competences.includes('exigences') || competences.includes('analyse fonctionnelle') || 
+        competences.includes('gestion des exigences') || competences.includes('analyse des processus') ||
+        competences.includes('modélisation')) {
+      return 'Business Analysis';
+    }
+    
     // Management & PMO
-    if (competences.includes('gestion') || competences.includes('projet') || competences.includes('pmo') || 
+    if (title.includes('chef') || title.includes('pmo') || title.includes('scrum') || title.includes('coach') ||
+        competences.includes('gestion') || competences.includes('projet') || competences.includes('pmo') || 
         competences.includes('scrum') || competences.includes('agile') || competences.includes('coaching') ||
         competences.includes('transformation') || competences.includes('stratégie')) {
       return 'Management & PMO';
     }
     
-    // Product & UX
-    if (competences.includes('product') || competences.includes('ux') || competences.includes('ui') || 
-        competences.includes('user research') || competences.includes('roadmap') || competences.includes('go-to-market') ||
-        competences.includes('figma') || competences.includes('adobe xd') || competences.includes('prototyping')) {
-      return 'Product & UX';
-    }
-    
     // Cybersécurité
-    if (competences.includes('sécurité') || competences.includes('audit') || competences.includes('owasp') || 
+    if (title.includes('cyber') || title.includes('sécurité') ||
+        competences.includes('sécurité') || competences.includes('audit') || competences.includes('owasp') || 
         competences.includes('tests pénétration') || competences.includes('conformité')) {
       return 'Cybersécurité';
     }
     
-    // DevOps & Infrastructure
-    if (competences.includes('devops') || competences.includes('aws') || competences.includes('docker') || 
-        competences.includes('kubernetes') || competences.includes('infrastructure') || competences.includes('terraform')) {
-      return 'DevOps & Infrastructure';
-    }
-    
-    // Développement
-    if (competences.includes('react') || competences.includes('node.js') || competences.includes('typescript') || 
-        competences.includes('développement') || competences.includes('vue.js') || competences.includes('css3') ||
-        competences.includes('java') || competences.includes('spring boot') || competences.includes('postgresql') ||
-        competences.includes('react native') || competences.includes('flutter') || competences.includes('ios') ||
-        competences.includes('android')) {
-      return 'Développement';
-    }
-    
-    // Architecture
-    if (competences.includes('architecture') || competences.includes('cloud') || competences.includes('microservices') || 
+    // Architecture (priorité haute - vérifier d'abord les titres)
+    if (title.includes('architecte') || title.includes('architecture') ||
+        competences.includes('architecture') || competences.includes('cloud') || competences.includes('microservices') || 
         competences.includes('api design') || competences.includes('kafka')) {
       return 'Architecture';
     }
     
-    // Business Analysis
-    if (competences.includes('analyse métier') || competences.includes('uml') || competences.includes('bpmn') || 
-        competences.includes('exigences') || competences.includes('analyse fonctionnelle') || 
-        competences.includes('gestion des exigences') || competences.includes('analyse des processus') ||
-        competences.includes('modélisation')) {
-      return 'Business Analysis';
+    // DevOps & Infrastructure
+    if (title.includes('devops') || title.includes('infrastructure') ||
+        competences.includes('devops') || competences.includes('aws') || competences.includes('docker') || 
+        competences.includes('kubernetes') || competences.includes('infrastructure') || competences.includes('terraform')) {
+      return 'DevOps & Infrastructure';
     }
     
     return 'Autres';
