@@ -24,7 +24,11 @@ const benefits = [
   }
 ];
 
-const ClientSection = () => {
+interface ClientSectionProps {
+  onOpenForm?: (data: any) => void;
+}
+
+const ClientSection = ({ onOpenForm }: ClientSectionProps) => {
   const [formData, setFormData] = useState({
     profile: '',
     seniority: '',
@@ -42,13 +46,21 @@ const ClientSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Stocker les données dans localStorage pour les récupérer dans le formulaire complet
-    localStorage.setItem('clientFormData', JSON.stringify(formData));
+    console.log('Formulaire ClientSection soumis:', formData);
     
-    // Rediriger vers la section avec le formulaire complet
-    const priceSection = document.getElementById('price-comparison');
-    if (priceSection) {
-      priceSection.scrollIntoView({ behavior: 'smooth' });
+    // Ouvrir le popup du formulaire complet avec les données
+    if (onOpenForm) {
+      onOpenForm(formData);
+    } else {
+      // Fallback : stocker dans localStorage et rediriger
+      localStorage.setItem('clientFormData', JSON.stringify(formData));
+      const priceSection = document.getElementById('price-comparison');
+      if (priceSection) {
+        console.log('Scroll vers la section price-comparison');
+        priceSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.log('Section price-comparison non trouvée');
+      }
     }
   };
 

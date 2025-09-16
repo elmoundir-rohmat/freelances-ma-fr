@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 import Hero from './Hero';
 import PriceComparison from './PriceComparison';
@@ -13,13 +13,30 @@ interface EntreprisesPageProps {
 }
 
 const EntreprisesPage: React.FC<EntreprisesPageProps> = ({ onNavigate }) => {
+  const [shouldOpenForm, setShouldOpenForm] = useState(false);
+  const [formDataFromClientSection, setFormDataFromClientSection] = useState<any>(null);
+
+  const handleOpenForm = (data: any) => {
+    console.log('Données reçues de ClientSection:', data);
+    setFormDataFromClientSection(data);
+    setShouldOpenForm(true);
+  };
+
+  const handleFormOpened = () => {
+    setShouldOpenForm(false);
+    setFormDataFromClientSection(null);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Hero />
-      <PriceComparison />
+      <PriceComparison 
+        onOpenFormFromOutside={shouldOpenForm ? handleFormOpened : undefined}
+        initialFormData={formDataFromClientSection}
+      />
       <ServicesGrid />
       <FreelancerShowcase />
-      <ClientSection />
+      <ClientSection onOpenForm={handleOpenForm} />
       <Testimonials />
     </div>
   );

@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { Calculator, TrendingDown, TrendingUp, CheckCircle, XCircle } from 'lucide-react';
 
-const PriceComparison = () => {
+interface PriceComparisonProps {
+  onOpenFormFromOutside?: () => void;
+  initialFormData?: any;
+}
+
+const PriceComparison = ({ onOpenFormFromOutside, initialFormData }: PriceComparisonProps) => {
   const [isWithConsultants, setIsWithConsultants] = useState(true); // Changé de false à true
   const [projectType, setProjectType] = useState('data'); // Changé de 'web' à 'data'
   const [projectDuration, setProjectDuration] = useState(109); // Changé de 20 à 109 jours (6 mois)
@@ -21,26 +26,50 @@ const PriceComparison = () => {
     budget: ''
   });
 
-  // Charger les données du ClientSection form si elles existent
+  // Charger les données initiales du ClientSection si elles existent
   React.useEffect(() => {
-    const clientFormData = localStorage.getItem('clientFormData');
-    if (clientFormData) {
-      try {
-        const parsedData = JSON.parse(clientFormData);
-        setFormData(prev => ({
-          ...prev,
-          profile: parsedData.profile || '',
-          seniority: parsedData.seniority || '',
-          duration: parsedData.duration || '',
-          budget: parsedData.budget || ''
-        }));
-        // Nettoyer le localStorage après utilisation
-        localStorage.removeItem('clientFormData');
-      } catch (error) {
-        console.error('Error parsing client form data:', error);
+    if (initialFormData) {
+      console.log('Données initiales reçues:', initialFormData);
+      setFormData(prev => ({
+        ...prev,
+        profile: initialFormData.profile || '',
+        seniority: initialFormData.seniority || '',
+        duration: initialFormData.duration || '',
+        budget: initialFormData.budget || ''
+      }));
+    }
+  }, [initialFormData]);
+
+  // Fallback : charger depuis localStorage si pas de données initiales
+  React.useEffect(() => {
+    if (!initialFormData) {
+      const clientFormData = localStorage.getItem('clientFormData');
+      if (clientFormData) {
+        try {
+          const parsedData = JSON.parse(clientFormData);
+          console.log('Données chargées depuis localStorage:', parsedData);
+          setFormData(prev => ({
+            ...prev,
+            profile: parsedData.profile || '',
+            seniority: parsedData.seniority || '',
+            duration: parsedData.duration || '',
+            budget: parsedData.budget || ''
+          }));
+          localStorage.removeItem('clientFormData');
+        } catch (error) {
+          console.error('Error parsing client form data:', error);
+        }
       }
     }
-  }, []);
+  }, [initialFormData]);
+
+  // Ouvrir le formulaire depuis l'extérieur
+  React.useEffect(() => {
+    if (onOpenFormFromOutside) {
+      console.log('Ouverture du formulaire depuis ClientSection');
+      setShowForm(true);
+    }
+  }, [onOpenFormFromOutside]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -109,7 +138,7 @@ const PriceComparison = () => {
   const savingsPercentage = totalBasePrice > 0 ? Math.round((savings / totalBasePrice) * 100) : 0;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="price-comparison" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
