@@ -23,9 +23,27 @@ const PriceComparison = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
     console.log('Formulaire soumis:', formData);
-    // Ici vous pouvez ajouter la logique d'envoi
-    setShowForm(false);
+    
+    // Créer un FormData pour l'envoi à Netlify
+    const form = e.target as HTMLFormElement;
+    const netlifyFormData = new FormData(form);
+    
+    // Envoyer à Netlify
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(netlifyFormData as any).toString()
+    })
+    .then(() => {
+      alert('Votre demande a été envoyée avec succès ! Nous vous contacterons bientôt.');
+      setShowForm(false);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('Une erreur est survenue. Veuillez réessayer.');
+    });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -288,7 +306,11 @@ const PriceComparison = () => {
               </div>
 
               {/* Formulaire */}
-              <form onSubmit={handleSubmit} className="p-6 space-y-6">
+              <form onSubmit={handleSubmit} className="p-6 space-y-6" name="enterprise-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                {/* Champ honeypot pour éviter le spam */}
+                <div style={{ display: 'none' }}>
+                  <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </div>
                 
                 {/* Profil recherché */}
                 <div>
