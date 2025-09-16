@@ -13,6 +13,7 @@
     
     <!-- Formulaire Consultants -->
     <form name="freelance-application" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="freelance-application" />
       <input type="text" name="firstName" />
       <input type="text" name="lastName" />
       <input type="email" name="email" />
@@ -27,24 +28,9 @@
       <input type="text" name="availability" />
     </form>
     
-    <!-- Formulaire Entreprises Hero -->
-    <form name="enterprise-hero" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="profile" />
-      <input type="text" name="seniority" />
-      <input type="text" name="duration" />
-      <input type="text" name="companyType" />
-      <input type="text" name="companyName" />
-      <input type="text" name="position" />
-      <input type="text" name="firstName" />
-      <input type="text" name="lastName" />
-      <input type="email" name="email" />
-      <input type="tel" name="phone" />
-      <textarea name="description"></textarea>
-      <input type="text" name="budget" />
-    </form>
-    
     <!-- Formulaire Entreprises Contact -->
     <form name="enterprise-contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="enterprise-contact" />
       <input type="text" name="profile" />
       <input type="text" name="seniority" />
       <input type="text" name="duration" />

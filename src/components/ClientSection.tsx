@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Building2, Users, Clock, Shield, ArrowRight } from 'lucide-react';
 
 const benefits = [
@@ -25,6 +25,33 @@ const benefits = [
 ];
 
 const ClientSection = () => {
+  const [formData, setFormData] = useState({
+    profile: '',
+    seniority: '',
+    duration: '',
+    budget: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Stocker les données dans localStorage pour les récupérer dans le formulaire complet
+    localStorage.setItem('clientFormData', JSON.stringify(formData));
+    
+    // Rediriger vers la section avec le formulaire complet
+    const priceSection = document.getElementById('price-comparison');
+    if (priceSection) {
+      priceSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="clients" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,51 +101,75 @@ const ClientSection = () => {
               Démarrer Votre Projet
             </h3>
             
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Profil recherché */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Titre du Projet
+                  Profil recherché *
                 </label>
                 <input
                   type="text"
-                  placeholder="ex: Développer un site e-commerce React"
+                  name="profile"
+                  value={formData.profile}
+                  onChange={handleInputChange}
+                  placeholder="ex: Data Scientist, Développeur Full-Stack..."
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  required
                 />
               </div>
-              
+
+              {/* Séniorité */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Catégorie du Projet
+                  Séniorité du profil recherché *
                 </label>
-                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
-                  <option>Développement Web</option>
-                  <option>Développement Mobile</option>
-                  <option>Design UI/UX</option>
-                  <option>DevOps</option>
-                  <option>Cybersécurité</option>
+                <select
+                  name="seniority"
+                  value={formData.seniority}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  required
+                >
+                  <option value="">Sélectionnez la séniorité</option>
+                  <option value="Moins de 3 ans">Moins de 3 ans</option>
+                  <option value="Entre 3 et 5 ans">Entre 3 et 5 ans</option>
+                  <option value="Entre 5 et 10 ans">Entre 5 et 10 ans</option>
+                  <option value="+ de 10 ans">+ de 10 ans</option>
                 </select>
               </div>
-              
+
+              {/* Durée de mission */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Budget Journalier
+                  Durée de la mission *
                 </label>
-                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
-                  <option>€300 - €500/jour</option>
-                  <option>€500 - €700/jour</option>
-                  <option>€700 - €1000/jour</option>
-                  <option>€1000+/jour</option>
+                <select
+                  name="duration"
+                  value={formData.duration}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  required
+                >
+                  <option value="">Sélectionnez la durée</option>
+                  <option value="Moins de 3 mois">Moins de 3 mois</option>
+                  <option value="4-6 mois">4-6 mois</option>
+                  <option value="6-12 mois">6-12 mois</option>
+                  <option value="12+ mois">12+ mois</option>
                 </select>
               </div>
-              
+
+              {/* Budget journalier */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Description du Projet
+                  Budget journalier estimé (€)
                 </label>
-                <textarea
-                  rows={4}
-                  placeholder="Décrivez vos besoins et exigences..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                <input
+                  type="number"
+                  name="budget"
+                  value={formData.budget}
+                  onChange={handleInputChange}
+                  placeholder="ex: 500, 800, 1200..."
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 />
               </div>
               
@@ -126,7 +177,7 @@ const ClientSection = () => {
                 type="submit"
                 className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
               >
-                Obtenir des Propositions Gratuites
+                Continuer
               </button>
             </form>
           </div>

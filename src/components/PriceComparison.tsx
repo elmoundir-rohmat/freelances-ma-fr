@@ -21,6 +21,27 @@ const PriceComparison = () => {
     budget: ''
   });
 
+  // Charger les données du ClientSection form si elles existent
+  React.useEffect(() => {
+    const clientFormData = localStorage.getItem('clientFormData');
+    if (clientFormData) {
+      try {
+        const parsedData = JSON.parse(clientFormData);
+        setFormData(prev => ({
+          ...prev,
+          profile: parsedData.profile || '',
+          seniority: parsedData.seniority || '',
+          duration: parsedData.duration || '',
+          budget: parsedData.budget || ''
+        }));
+        // Nettoyer le localStorage après utilisation
+        localStorage.removeItem('clientFormData');
+      } catch (error) {
+        console.error('Error parsing client form data:', error);
+      }
+    }
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -42,19 +63,27 @@ const PriceComparison = () => {
     netlifyFormData.append('description', formData.description);
     netlifyFormData.append('budget', formData.budget);
     
-    // Envoyer à Netlify
-    fetch('/', {
-      method: 'POST',
-      body: netlifyFormData
-    })
-    .then(() => {
-      alert('Votre demande a été envoyée avec succès ! Nous vous contacterons bientôt.');
-      setShowForm(false);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      alert('Une erreur est survenue. Veuillez réessayer.');
-    });
+    // Envoyer à Netlify avec retry
+    const submitToNetlify = async () => {
+      try {
+        const response = await fetch('/', {
+          method: 'POST',
+          body: netlifyFormData
+        });
+        
+        if (response.ok) {
+          alert('Votre demande a été envoyée avec succès ! Nous vous contacterons bientôt.');
+          setShowForm(false);
+        } else {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Une erreur est survenue. Veuillez réessayer ou nous contacter directement.');
+      }
+    };
+    
+    submitToNetlify();
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

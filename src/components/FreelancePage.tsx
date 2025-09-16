@@ -144,51 +144,59 @@ const FreelancePage = () => {
     console.log('Form submitted:', formDataForNetlify);
     
     // Créer FormData avec les bonnes données
-    const formData = new FormData();
-    formData.append('form-name', 'freelance-application');
-    formData.append('firstName', formDataForNetlify.firstName);
-    formData.append('lastName', formDataForNetlify.lastName);
-    formData.append('email', formDataForNetlify.email);
-    formData.append('phone', formDataForNetlify.phone);
-    formData.append('title', formDataForNetlify.title);
-    formData.append('formation', formDataForNetlify.formation);
-    formData.append('tarifJournalier', formDataForNetlify.tarifJournalier);
-    formData.append('competences', formDataForNetlify.competences);
-    formData.append('experience', formDataForNetlify.experience);
-    formData.append('projetsRealises', formDataForNetlify.projetsRealises);
-    formData.append('entreprises', formDataForNetlify.entreprises);
-    formData.append('availability', formDataForNetlify.availability);
+    const netlifyFormData = new FormData();
+    netlifyFormData.append('form-name', 'freelance-application');
+    netlifyFormData.append('firstName', formDataForNetlify.firstName);
+    netlifyFormData.append('lastName', formDataForNetlify.lastName);
+    netlifyFormData.append('email', formDataForNetlify.email);
+    netlifyFormData.append('phone', formDataForNetlify.phone);
+    netlifyFormData.append('title', formDataForNetlify.title);
+    netlifyFormData.append('formation', formDataForNetlify.formation);
+    netlifyFormData.append('tarifJournalier', formDataForNetlify.tarifJournalier);
+    netlifyFormData.append('competences', formDataForNetlify.competences);
+    netlifyFormData.append('experience', formDataForNetlify.experience);
+    netlifyFormData.append('projetsRealises', formDataForNetlify.projetsRealises);
+    netlifyFormData.append('entreprises', formDataForNetlify.entreprises);
+    netlifyFormData.append('availability', formDataForNetlify.availability);
     
-    // Envoyer à Netlify
-    fetch('/', {
-      method: 'POST',
-      body: formData
-    })
-    .then(() => {
-      alert('Votre candidature a été envoyée avec succès ! Nous vous contacterons bientôt.');
-      
-      // Reset form
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        title: '',
-        formation: '',
-        tarifJournalier: '',
-        competences: [],
-        experience: '',
-        projetsRealises: '',
-        entreprises: [],
-        motivation: '',
-        availability: ''
-      });
-      setShowForm(false);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      alert('Une erreur est survenue. Veuillez réessayer.');
-    });
+    // Envoyer à Netlify avec retry
+    const submitToNetlify = async () => {
+      try {
+        const response = await fetch('/', {
+          method: 'POST',
+          body: netlifyFormData
+        });
+        
+        if (response.ok) {
+          alert('Votre candidature a été envoyée avec succès ! Nous vous contacterons bientôt.');
+          
+          // Reset form
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            title: '',
+            formation: '',
+            tarifJournalier: '',
+            competences: [],
+            experience: '',
+            projetsRealises: '',
+            entreprises: [],
+            motivation: '',
+            availability: ''
+          });
+          setShowForm(false);
+        } else {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Une erreur est survenue. Veuillez réessayer ou nous contacter directement.');
+      }
+    };
+    
+    submitToNetlify();
   };
 
   return (
