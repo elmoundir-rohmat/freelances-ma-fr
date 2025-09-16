@@ -143,19 +143,26 @@ const FreelancePage = () => {
     
     console.log('Form submitted:', formDataForNetlify);
     
-    // Créer un FormData pour l'envoi à Netlify
-    const form = e.target as HTMLFormElement;
-    const netlifyFormData = new FormData(form);
-    
-    // Ajouter les champs formatés
-    netlifyFormData.set('competences', formDataForNetlify.competences);
-    netlifyFormData.set('entreprises', formDataForNetlify.entreprises);
+    // Créer FormData avec les bonnes données
+    const formData = new FormData();
+    formData.append('form-name', 'freelance-application');
+    formData.append('firstName', formDataForNetlify.firstName);
+    formData.append('lastName', formDataForNetlify.lastName);
+    formData.append('email', formDataForNetlify.email);
+    formData.append('phone', formDataForNetlify.phone);
+    formData.append('title', formDataForNetlify.title);
+    formData.append('formation', formDataForNetlify.formation);
+    formData.append('tarifJournalier', formDataForNetlify.tarifJournalier);
+    formData.append('competences', formDataForNetlify.competences);
+    formData.append('experience', formDataForNetlify.experience);
+    formData.append('projetsRealises', formDataForNetlify.projetsRealises);
+    formData.append('entreprises', formDataForNetlify.entreprises);
+    formData.append('availability', formDataForNetlify.availability);
     
     // Envoyer à Netlify
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(netlifyFormData as any).toString()
+      body: formData
     })
     .then(() => {
       alert('Votre candidature a été envoyée avec succès ! Nous vous contacterons bientôt.');

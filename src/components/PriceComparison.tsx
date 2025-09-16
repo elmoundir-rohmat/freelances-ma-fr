@@ -26,15 +26,26 @@ const PriceComparison = () => {
     
     console.log('Formulaire soumis:', formData);
     
-    // Créer un FormData pour l'envoi à Netlify
-    const form = e.target as HTMLFormElement;
-    const netlifyFormData = new FormData(form);
+    // Créer FormData avec les bonnes données
+    const netlifyFormData = new FormData();
+    netlifyFormData.append('form-name', 'enterprise-contact');
+    netlifyFormData.append('profile', formData.profile);
+    netlifyFormData.append('seniority', formData.seniority);
+    netlifyFormData.append('duration', formData.duration);
+    netlifyFormData.append('companyType', formData.companyType);
+    netlifyFormData.append('companyName', formData.companyName);
+    netlifyFormData.append('position', formData.position);
+    netlifyFormData.append('firstName', formData.firstName);
+    netlifyFormData.append('lastName', formData.lastName);
+    netlifyFormData.append('email', formData.email);
+    netlifyFormData.append('phone', formData.phone);
+    netlifyFormData.append('description', formData.description);
+    netlifyFormData.append('budget', formData.budget);
     
     // Envoyer à Netlify
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(netlifyFormData as any).toString()
+      body: netlifyFormData
     })
     .then(() => {
       alert('Votre demande a été envoyée avec succès ! Nous vous contacterons bientôt.');
