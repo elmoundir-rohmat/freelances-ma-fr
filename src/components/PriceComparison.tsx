@@ -84,7 +84,7 @@ const PriceComparison = () => {
               >
                 <div className="flex items-center space-x-2">
                   <XCircle className="h-5 w-5" />
-                  <span>Sans FranceTech</span>
+                  <span>Sans FreeMote</span>
                 </div>
               </button>
               <button
@@ -97,7 +97,7 @@ const PriceComparison = () => {
               >
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="h-5 w-5" />
-                  <span>Avec FranceTech</span>
+                  <span>Avec FreeMote</span>
                 </div>
               </button>
             </div>
@@ -183,7 +183,7 @@ const PriceComparison = () => {
               
               {/* Price Cards */}
               <div className="grid md:grid-cols-2 gap-6">
-                {/* Without FranceTech - Always visible */}
+                {/* Without FreeMote - Always visible */}
                 <div className={`bg-white p-6 rounded-xl shadow-sm border-2 transition-all duration-300 ${
                   !isWithConsultants ? 'border-red-200 bg-red-50' : 'border-gray-200'
                 }`}>
@@ -202,7 +202,7 @@ const PriceComparison = () => {
                   </div>
                 </div>
 
-                {/* With FranceTech - Only visible when selected */}
+                {/* With FreeMote - Only visible when selected */}
                 {isWithConsultants && (
                   <div className="bg-white p-6 rounded-xl shadow-sm border-2 border-green-200 bg-green-50">
                     <div className="flex items-center justify-between mb-4">
@@ -289,6 +289,7 @@ const PriceComparison = () => {
 
               {/* Formulaire */}
               <form onSubmit={handleSubmit} className="p-6 space-y-6">
+                
                 {/* Profil recherché */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -334,7 +335,7 @@ const PriceComparison = () => {
                     Durée de la mission *
                   </label>
                   <div className="grid grid-cols-2 gap-3">
-                    {['1 mois', '2-3 mois', '4-6 mois', '6+ mois'].map((option) => (
+                    {['Moins de 3 mois', '4-6 mois', '6-12 mois', '12+ mois'].map((option) => (
                       <label key={option} className="flex items-center space-x-2 cursor-pointer">
                         <input
                           type="radio"

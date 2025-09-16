@@ -63,7 +63,7 @@ const Hero = () => {
                 <ChevronRight className="h-5 w-5" />
               </button>
               <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-200 font-semibold">
-                Rejoindre FranceTech
+                Rejoindre FreeMote
               </button>
             </div>
 
@@ -180,7 +180,7 @@ const Hero = () => {
                   Durée de la mission *
                 </label>
                 <div className="grid grid-cols-2 gap-3">
-                  {['1 mois', '2-3 mois', '4-6 mois', '6+ mois'].map((option) => (
+                  {['Moins de 3 mois', '4-6 mois', '6-12 mois', '12+ mois'].map((option) => (
                     <label key={option} className="flex items-center space-x-2 cursor-pointer">
                       <input
                         type="radio"

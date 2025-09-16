@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Code2 className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold">FranceTech</span>
+              <span className="text-xl font-bold">FreeMote</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Connecter des consultants IT d'excellence formés en France avec des projets ambitieux. 
@@ -107,7 +107,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2025 FranceTech. Tous droits réservés.
+              © 2025 FreeMote. Tous droits réservés.
             </p>
             <div className="flex items-center space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">

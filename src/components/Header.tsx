@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
 import { Menu, X, Code2 } from 'lucide-react';
 
-const Header = () => {
+interface HeaderProps {
+  onNavigate?: (page: string) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, page: string) => {
+    e.preventDefault();
+    if (onNavigate) {
+      onNavigate(page);
+    }
+  };
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
@@ -11,22 +22,31 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <Code2 className="h-8 w-8 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">FranceTech</span>
+            <span className="text-xl font-bold text-gray-900">FreeMote</span>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#consultants" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-              Consultants
+            <a 
+              href="/" 
+              onClick={(e) => handleNavClick(e, 'home')}
+              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+            >
+              Accueil
             </a>
-            <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-              Services
-            </a>
-            <a href="#clients" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+            <a 
+              href="/entreprises" 
+              onClick={(e) => handleNavClick(e, 'entreprises')}
+              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+            >
               Pour Entreprises
             </a>
-            <a href="#avantages" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-              Avantages
+            <a 
+              href="/freelance" 
+              onClick={(e) => handleNavClick(e, 'freelance')}
+              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+            >
+              Freelance
             </a>
           </nav>
 
@@ -53,17 +73,26 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col space-y-4">
-              <a href="#consultants" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                Consultants
+              <a 
+                href="/" 
+                onClick={(e) => handleNavClick(e, 'home')}
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              >
+                Accueil
               </a>
-              <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                Services
-              </a>
-              <a href="#clients" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+              <a 
+                href="/entreprises" 
+                onClick={(e) => handleNavClick(e, 'entreprises')}
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              >
                 Pour Entreprises
               </a>
-              <a href="#avantages" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                Avantages
+              <a 
+                href="/freelance" 
+                onClick={(e) => handleNavClick(e, 'freelance')}
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              >
+                Freelance
               </a>
               <div className="flex flex-col space-y-2 pt-4">
                 <button className="text-blue-600 hover:text-blue-700 font-medium transition-colors text-left">

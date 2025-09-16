@@ -33,7 +33,7 @@ const ClientSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-                Pourquoi les Entreprises Choisissent FranceTech
+                Pourquoi les Entreprises Choisissent FreeMote
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
                 Rejoignez 300+ entreprises qui nous font confiance pour leurs projets IT 

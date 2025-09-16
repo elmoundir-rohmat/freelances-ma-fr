@@ -9,7 +9,7 @@ const testimonials = [
     role: 'CTO',
     image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300',
     rating: 5,
-    text: "FranceTech nous a permis de trouver un excellent développeur React formé à CentraleSupélec. La qualité du travail a dépassé nos attentes et le projet a été livré dans les délais."
+    text: "FreeMote nous a permis de trouver un excellent développeur React formé à CentraleSupélec. La qualité du travail a dépassé nos attentes et le projet a été livré dans les délais."
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const Testimonials = () => {
             Approuvé par des Entreprises en Croissance
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Découvrez ce que nos clients disent de leur expérience avec les consultants FranceTech
+            Découvrez ce que nos clients disent de leur expérience avec les consultants FreeMote
           </p>
         </div>
 
