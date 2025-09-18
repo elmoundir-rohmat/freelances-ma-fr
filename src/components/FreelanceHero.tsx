@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronRight, Star, CheckCircle, ArrowRight } from 'lucide-react';
 
 const FreelanceHero = () => {
@@ -119,6 +119,19 @@ const FreelanceHero = () => {
     setRevenueFormData({ firstName: '', lastName: '', email: '', tjmMaroc: '' });
   };
 
+  // Écouter l'événement personnalisé pour ouvrir le formulaire de simulation depuis FreelancePage
+  useEffect(() => {
+    const handleOpenRevenueForm = () => {
+      setShowRevenueForm(true);
+    };
+
+    window.addEventListener('openRevenueFormFromPage', handleOpenRevenueForm);
+
+    return () => {
+      window.removeEventListener('openRevenueFormFromPage', handleOpenRevenueForm);
+    };
+  }, []);
+
   return (
     <section className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,13 +141,12 @@ const FreelanceHero = () => {
             <div className="space-y-4">
               <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 Des missions en{' '}
-                <br />
                 <span className="text-blue-600">Remote</span>{' '}
-                Depuis le{' '}
+                depuis le{' '}
                 <span className="text-blue-600">Maroc</span>
               </h1>
               <p className="text-xl text-blue-500 leading-relaxed">
-                CLIENTS FRANÇAIS • RÉMUNERATION INTÉRESSANTE • PROJETS PREMIUM
+                CLIENTS FRANÇAIS • RÉMUNERATION INTÉRESSANTE
               </p>
             </div>
 
@@ -151,7 +163,7 @@ const FreelanceHero = () => {
                 onClick={() => setShowRevenueForm(true)}
                 className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-200 font-semibold"
               >
-                Simuler mon Revenu
+                Estimer Mon Revenu
               </button>
             </div>
 
@@ -159,15 +171,15 @@ const FreelanceHero = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="text-gray-600">Accès au marché français depuis le Maroc</span>
+                <span className="text-gray-600">Des missions avec des clients Français en Remote depuis le Maroc</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="text-gray-600">Rémuneration attractive, gardez votre niveau de vie comme en France</span>
+                <span className="text-gray-600">Rémuneration attractive, gardez un niveau de vie comparable à la France</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="text-gray-600">Support légal et accompagnement</span>
+                <span className="text-gray-600">La transition parfaite pour t'installer au Maroc</span>
               </div>
             </div>
           </div>
@@ -275,7 +287,7 @@ const FreelanceHero = () => {
                 </label>
                 <div className="flex gap-2">
                   <div className="flex-1">
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" defaultValue="+33">
                       <option value="+212">🇲🇦 Maroc (+212)</option>
                       <option value="+33">🇫🇷 France (+33)</option>
                     </select>
@@ -454,64 +466,64 @@ const FreelanceHero = () => {
       {/* Modal Simulation de Revenu */}
       {showRevenueForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl max-w-md w-full">
+          <div className="bg-white rounded-xl max-w-sm md:max-w-md lg:max-w-lg w-full max-h-[80vh] overflow-y-auto">
             {/* Header */}
-            <div className="p-6 border-b border-gray-200">
+            <div className="p-4 md:p-6 border-b border-gray-200">
               <div className="flex items-center justify-between">
-                <h3 className="text-2xl font-bold text-gray-900">Simuler mon Revenu</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Estimer Mon Revenu</h3>
                 <button
                   onClick={() => setShowRevenueForm(false)}
-                  className="text-gray-400 hover:text-gray-600 text-2xl font-bold"
+                  className="text-gray-400 hover:text-gray-600 text-xl font-bold"
                 >
                   ×
                 </button>
               </div>
-              <p className="text-gray-600 mt-2">
-                Découvrez combien vous pourriez économiser en travaillant avec des clients français
+              <p className="text-gray-600 mt-1 text-sm">
+                Ex: avec un TJM de 2500 DH, ton revenu net pourrait atteindre 48 000 DH/mois
               </p>
             </div>
 
             {/* Formulaire */}
-            <form onSubmit={handleRevenueSubmit} className="p-6 space-y-6" name="form-simulation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <form onSubmit={handleRevenueSubmit} className="p-4 md:p-6 space-y-4 md:space-y-6" name="form-simulation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
               {/* Champ honeypot pour éviter le spam */}
               <div style={{ display: 'none' }}>
                 <label>Don't fill this out if you're human: <input name="bot-field" /></label>
               </div>
-              {/* Prénom */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Prénom *
-                </label>
-                <input
-                  type="text"
-                  name="firstName"
-                  value={revenueFormData.firstName}
-                  onChange={handleRevenueInputChange}
-                  placeholder="Votre prénom"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  required
-                />
-              </div>
-
-              {/* Nom */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Nom *
-                </label>
-                <input
-                  type="text"
-                  name="lastName"
-                  value={revenueFormData.lastName}
-                  onChange={handleRevenueInputChange}
-                  placeholder="Votre nom"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  required
-                />
+              {/* Prénom et Nom */}
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs md:text-sm font-medium text-gray-700 mb-1">
+                    Prénom *
+                  </label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={revenueFormData.firstName}
+                    onChange={handleRevenueInputChange}
+                    placeholder="Prénom"
+                    className="w-full px-3 py-2 md:py-3 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs md:text-sm font-medium text-gray-700 mb-1">
+                    Nom *
+                  </label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={revenueFormData.lastName}
+                    onChange={handleRevenueInputChange}
+                    placeholder="Nom"
+                    className="w-full px-3 py-2 md:py-3 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
+                  />
+                </div>
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-xs md:text-sm font-medium text-gray-700 mb-1">
                   Email *
                 </label>
                 <input
@@ -520,27 +532,27 @@ const FreelanceHero = () => {
                   value={revenueFormData.email}
                   onChange={handleRevenueInputChange}
                   placeholder="votre.email@exemple.com"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 md:py-3 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   required
                 />
-                <p className="text-sm text-gray-500 mt-2">
-                  Nous vous enverrons la simulation détaillée par email
+                <p className="text-xs text-gray-500 mt-1">
+                  Estimation détaillée par email
                 </p>
               </div>
 
               {/* TJM au Maroc */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  TJM au Maroc (DH) *
+                <label className="block text-xs md:text-sm font-medium text-gray-700 mb-1">
+                  TJM estimé au Maroc (DH) *
                 </label>
                 <select
                   name="tjmMaroc"
                   value={revenueFormData.tjmMaroc}
                   onChange={handleRevenueInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 md:py-3 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   required
                 >
-                  <option value="">Sélectionnez votre TJM</option>
+                  <option value="">Sélectionne ton TJM</option>
                   <option value="2000">2000 DH/jour</option>
                   <option value="2100">2100 DH/jour</option>
                   <option value="2200">2200 DH/jour</option>
@@ -558,25 +570,25 @@ const FreelanceHero = () => {
                   <option value="3400">3400 DH/jour</option>
                   <option value="3500">3500 DH/jour</option>
                 </select>
-                <p className="text-sm text-gray-500 mt-2">
-                  Votre tarif journalier moyen actuel au Maroc
+                <p className="text-xs text-gray-500 mt-1">
+                  TJM que tu penses pouvoir demander au Maroc
                 </p>
               </div>
 
               {/* Boutons */}
-              <div className="flex gap-3 pt-4">
+              <div className="flex gap-2 md:gap-4 pt-2 md:pt-4">
                 <button
                   type="button"
                   onClick={() => setShowRevenueForm(false)}
-                  className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="flex-1 px-4 py-2 md:py-3 text-sm md:text-base border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   Annuler
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                  className="flex-1 px-4 py-2 md:py-3 text-sm md:text-base bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
                 >
-                  Simuler
+                  Estimer
                 </button>
               </div>
             </form>

@@ -34,8 +34,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <span className="text-xl font-bold">FreeMote</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Connecter des consultants IT d'excellence formés en France avec des projets ambitieux. 
-              Construire l'avenir du travail à distance, un projet à la fois.
+              Connecter des consultants IT premium, formés en France avec des projets ambitieux. 
+              Construire l'avenir du travail à distance.
             </p>
             <div className="flex items-center space-x-4">
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
@@ -55,12 +55,41 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h3 className="text-lg font-semibold">Pour les Consultants</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Si on est sur la page freelance, ouvrir le formulaire de candidature
+                    if (window.location.pathname === '/freelance') {
+                      const event = new CustomEvent('openFormFromFooter');
+                      window.dispatchEvent(event);
+                    } else {
+                      // Sinon rediriger vers la page freelance
+                      if (onNavigate) {
+                        onNavigate('freelance');
+                      }
+                    }
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Rejoindre Notre Plateforme
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (window.location.pathname === '/freelance') {
+                      handleScrollToSection('concept');
+                    } else {
+                      if (onNavigate) {
+                        onNavigate('freelance');
+                      }
+                    }
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Comment Ça Marche
                 </a>
               </li>
@@ -79,12 +108,38 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (window.location.pathname === '/freelance') {
+                      handleScrollToSection('avantages');
+                    } else {
+                      if (onNavigate) {
+                        onNavigate('freelance');
+                      }
+                    }
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Histoires de Succès
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (window.location.pathname === '/freelance') {
+                      handleScrollToSection('cta-freelance');
+                    } else {
+                      if (onNavigate) {
+                        onNavigate('freelance');
+                      }
+                    }
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Ressources
                 </a>
               </li>
@@ -166,11 +221,11 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-gray-400" />
-                <span className="text-gray-400">contact@francetech.fr</span>
+                <span className="text-gray-400">contact@freemote.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-gray-400" />
-                <span className="text-gray-400">+33 1 23 45 67 89</span>
+                <span className="text-gray-400">+33 6 19 47 05 19</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-gray-400" />

@@ -340,7 +340,7 @@ const Hero = () => {
                 </label>
                 <div className="flex gap-2">
                   <div className="flex-1">
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" defaultValue="+33">
                       <option value="+33">🇫🇷 France (+33)</option>
                       <option value="+32">🇧🇪 Belgique (+32)</option>
                       <option value="+41">🇨🇭 Suisse (+41)</option>

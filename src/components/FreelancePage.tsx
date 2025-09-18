@@ -116,6 +116,12 @@ const FreelancePage = () => {
     }));
   };
 
+  const handleOpenRevenueForm = () => {
+    // Créer un événement personnalisé pour déclencher l'ouverture du formulaire de simulation dans FreelanceHero
+    const event = new CustomEvent('openRevenueFormFromPage');
+    window.dispatchEvent(event);
+  };
+
   // Fermer les suggestions quand on clique ailleurs
   useEffect(() => {
     const handleClickOutside = () => {
@@ -289,7 +295,7 @@ const FreelancePage = () => {
       </section>
 
       {/* Avantages Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="avantages" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -299,13 +305,13 @@ const FreelancePage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <Users className="h-8 w-8 text-green-600" />
+              <div className="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <MapPin className="h-8 w-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Accompagnement Gratuit sur Mesure</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Le Move parfait pour t'installer au Maroc</h3>
               <p className="text-gray-600">
-                Conseil, accompagnement légal et juridique personnalisé pour vous aider 
-                dans votre transition vers le Maroc. Notre équipe vous guide à chaque étape.
+                La solution idéale pour t'installer au Maroc.
+                Vis ta transition en douceur, le temps de prendre tes repères et de construire ton réseau.
               </p>
             </div>
 
@@ -321,13 +327,13 @@ const FreelancePage = () => {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <MapPin className="h-8 w-8 text-purple-600" />
+              <div className="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <Users className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Le Move Parfait pour le Maroc</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Accompagnement légal et juridique sur Mesure</h3>
               <p className="text-gray-600">
-                C'est la solution idéale pour ceux qui veulent s'installer au Maroc tout en 
-                gardant vos habitudes professionelles dans un premier temps. Transition en douceur vers votre nouvelle vie.
+                Conseil, accompagnement légal et juridique personnalisé pour vous aider 
+                dans votre transition vers le Maroc. Notre équipe vous guide à chaque étape.
               </p>
             </div>
           </div>
@@ -335,7 +341,7 @@ const FreelancePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section id="cta-freelance" className="py-20 bg-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Prêt à Rejoindre FreeMote ?
@@ -344,13 +350,21 @@ const FreelancePage = () => {
             Postulez dès maintenant et commencez à travailler avec des clients français 
             depuis le Maroc.
           </p>
-          <button 
-            onClick={() => setShowForm(true)}
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-lg flex items-center justify-center gap-2 mx-auto"
-          >
-            Postuler Maintenant
-            <ArrowRight className="h-5 w-5" />
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={() => setShowForm(true)}
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-lg flex items-center justify-center gap-2"
+            >
+              Postuler Maintenant
+              <ArrowRight className="h-5 w-5" />
+            </button>
+            <button 
+              onClick={handleOpenRevenueForm}
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium text-lg"
+            >
+              Estimer mon revenu
+            </button>
+          </div>
         </div>
       </section>
 
@@ -432,7 +446,7 @@ const FreelancePage = () => {
                 </label>
                 <div className="flex gap-2">
                   <div className="flex-1">
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" defaultValue="+33">
                       <option value="+212">🇲🇦 Maroc (+212)</option>
                       <option value="+33">🇫🇷 France (+33)</option>
                     </select>
@@ -755,6 +769,7 @@ const FreelancePage = () => {
           </div>
         </div>
       )}
+
     </div>
   );
 };
