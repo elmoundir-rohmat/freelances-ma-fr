@@ -489,6 +489,8 @@ const FreelanceHero = () => {
               <div style={{ display: 'none' }}>
                 <label>Don't fill this out if you're human: <input name="bot-field" /></label>
               </div>
+              {/* Champ caché pour le nom du formulaire */}
+              <input type="hidden" name="form-name" value="form-simulation" />
               {/* Prénom et Nom */}
               <div className="grid grid-cols-2 gap-3">
                 <div>
