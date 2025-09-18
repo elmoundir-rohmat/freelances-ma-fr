@@ -36,6 +36,21 @@ const ClientSection = ({ onOpenForm }: ClientSectionProps) => {
     budget: ''
   });
 
+  // Écouter l'événement personnalisé du footer
+  React.useEffect(() => {
+    const handleOpenFormFromFooter = () => {
+      if (onOpenForm) {
+        onOpenForm(formData);
+      }
+    };
+
+    window.addEventListener('openFormFromFooter', handleOpenFormFromFooter);
+    
+    return () => {
+      window.removeEventListener('openFormFromFooter', handleOpenFormFromFooter);
+    };
+  }, [onOpenForm, formData]);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,

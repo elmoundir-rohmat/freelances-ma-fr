@@ -41,9 +41,9 @@ function App() {
   if (currentPage === 'freelance') {
     return (
       <div className="min-h-screen bg-white">
-        <Header onNavigate={handleNavigation} />
+        <Header />
         <FreelancePage />
-        <Footer />
+        <Footer onNavigate={handleNavigation} />
       </div>
     );
   }
@@ -51,18 +51,18 @@ function App() {
   if (currentPage === 'entreprises') {
     return (
       <div className="min-h-screen bg-white">
-        <Header onNavigate={handleNavigation} />
+        <Header />
         <EntreprisesPage onNavigate={handleNavigation} />
-        <Footer />
+        <Footer onNavigate={handleNavigation} />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-white">
-      <Header onNavigate={handleNavigation} />
+      <Header />
       <HomePage />
-      <Footer />
+      <Footer onNavigate={handleNavigation} />
     </div>
   );
 }

@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
 import { Menu, X, Code2 } from 'lucide-react';
 
-interface HeaderProps {
-  onNavigate?: (page: string) => void;
-}
+interface HeaderProps {}
 
-const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
+const Header: React.FC<HeaderProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, page: string) => {
-    e.preventDefault();
-    if (onNavigate) {
-      onNavigate(page);
-    }
-  };
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
@@ -25,36 +16,10 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
             <span className="text-xl font-bold text-gray-900">FreeMote</span>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a 
-              href="/" 
-              onClick={(e) => handleNavClick(e, 'home')}
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
-            >
-              Accueil
-            </a>
-            <a 
-              href="/entreprises" 
-              onClick={(e) => handleNavClick(e, 'entreprises')}
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
-            >
-              Pour Entreprises
-            </a>
-            <a 
-              href="/freelance" 
-              onClick={(e) => handleNavClick(e, 'freelance')}
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
-            >
-              Freelance
-            </a>
-          </nav>
+          {/* Desktop Navigation - Removed */}
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
-              Se Connecter
-            </button>
             <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
               Commencer
             </button>
@@ -73,31 +38,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col space-y-4">
-              <a 
-                href="/" 
-                onClick={(e) => handleNavClick(e, 'home')}
-                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
-              >
-                Accueil
-              </a>
-              <a 
-                href="/entreprises" 
-                onClick={(e) => handleNavClick(e, 'entreprises')}
-                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
-              >
-                Pour Entreprises
-              </a>
-              <a 
-                href="/freelance" 
-                onClick={(e) => handleNavClick(e, 'freelance')}
-                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
-              >
-                Freelance
-              </a>
-              <div className="flex flex-col space-y-2 pt-4">
-                <button className="text-blue-600 hover:text-blue-700 font-medium transition-colors text-left">
-                  Se Connecter
-                </button>
+              <div className="flex flex-col space-y-2">
                 <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
                   Commencer
                 </button>

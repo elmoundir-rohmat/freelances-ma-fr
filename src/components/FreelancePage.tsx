@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Users, Euro, Clock, CheckCircle, ArrowRight, Globe, Briefcase } from 'lucide-react';
+import FreelanceHero from './FreelanceHero';
 
 const FreelancePage = () => {
   const [formData, setFormData] = useState({
@@ -202,34 +203,7 @@ const FreelancePage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Devenez <span className="text-blue-600">Freelance FreeMote</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Travaillez avec des clients français depuis le Maroc. 
-              Profitez de notre expertise locale et de nos tarifs compétitifs pour décrocher des missions premium.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => setShowForm(true)}
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg flex items-center justify-center gap-2"
-              >
-                Rejoindre FreeMote
-                <ArrowRight className="h-5 w-5" />
-              </button>
-              <button 
-                onClick={() => document.getElementById('concept')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-medium text-lg"
-              >
-                Découvrir le concept
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FreelanceHero />
 
       {/* Concept Section */}
       <section id="concept" className="py-20 bg-white">
@@ -239,8 +213,8 @@ const FreelancePage = () => {
               Le Concept FreeMote
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Nous connectons les talents marocains avec les entreprises françaises, 
-              créant un pont entre deux écosystèmes complémentaires.
+              Nous connectons les talents MRE avec les entreprises françaises, 
+              créant des opportunités pour les deux parties.
             </p>
           </div>
 
@@ -267,10 +241,9 @@ const FreelancePage = () => {
                     <Euro className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Tarifs Compétitifs</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">Revenus attractifs</h4>
                     <p className="text-gray-600">
-                      Nos tarifs sont 50% inférieurs au marché français, 
-                      vous permettant de proposer des missions à prix attractifs.
+                      Même avec un TJM Marocain, vous garder une rémunération comparable à celle que vous aviez en France.
                     </p>
                   </div>
                 </div>
@@ -281,8 +254,8 @@ const FreelancePage = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Support Local</h4>
                     <p className="text-gray-600">
-                      Notre équipe basée au Maroc vous accompagne dans vos missions 
-                      et vous aide à naviguer dans l'écosystème français.
+                      Notre équipe basée au Maroc vous accompagne sur l'aspect légal et juridique
+                      et dans votre projet d'installation au Maroc.
                     </p>
                   </div>
                 </div>
@@ -327,34 +300,34 @@ const FreelancePage = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm">
               <div className="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <Euro className="h-8 w-8 text-green-600" />
+                <Users className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Rémunération Attractive</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Accompagnement Gratuit sur Mesure</h3>
               <p className="text-gray-600">
-                Tarifs compétitifs sur le marché français avec des missions bien rémunérées 
-                et des paiements réguliers.
+                Conseil, accompagnement légal et juridique personnalisé pour vous aider 
+                dans votre transition vers le Maroc. Notre équipe vous guide à chaque étape.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
               <div className="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <Clock className="h-8 w-8 text-blue-600" />
+                <Briefcase className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Flexibilité</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Solutions de Création d'Entreprise</h3>
               <p className="text-gray-600">
-                Travaillez depuis le Maroc avec des horaires adaptés. 
-                Choisissez vos missions selon vos disponibilités.
+                Solutions complètes de création de société ou de facturation au Maroc. 
+                Nous vous accompagnons dans vos démarches administratives et fiscales.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
               <div className="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <Briefcase className="h-8 w-8 text-purple-600" />
+                <MapPin className="h-8 w-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Développement Professionnel</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Le Move Parfait pour le Maroc</h3>
               <p className="text-gray-600">
-                Accédez à des projets d'envergure internationale et développez 
-                votre expertise sur des technologies de pointe.
+                C'est la solution idéale pour ceux qui veulent s'installer au Maroc tout en 
+                gardant vos habitudes professionelles dans un premier temps. Transition en douceur vers votre nouvelle vie.
               </p>
             </div>
           </div>

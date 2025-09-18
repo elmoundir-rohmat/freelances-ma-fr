@@ -1,7 +1,28 @@
 import React from 'react';
 import { Code2, Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 
-const Footer = () => {
+interface FooterProps {
+  onNavigate?: (page: string) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const handleScrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleOpenForm = () => {
+    // Créer un événement personnalisé pour déclencher l'ouverture du formulaire
+    const event = new CustomEvent('openFormFromFooter');
+    window.dispatchEvent(event);
+    
+    // Fallback: scroll vers la section ClientSection qui contient le formulaire
+    setTimeout(() => {
+      handleScrollToSection('clients');
+    }, 100);
+  };
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -44,6 +65,20 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a 
+                  href="/freelance" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (onNavigate) {
+                      onNavigate('freelance');
+                    }
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Page Freelance
+                </a>
+              </li>
+              <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
                   Histoires de Succès
                 </a>
@@ -61,23 +96,65 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Pour les Entreprises</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleOpenForm();
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Publier un Projet
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScrollToSection('consultants');
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Parcourir les Talents
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="/entreprises" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (onNavigate) {
+                      onNavigate('entreprises');
+                    }
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Page Entreprises
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScrollToSection('clients');
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Solutions Entreprise
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Études de Cas
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScrollToSection('price-comparison');
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Maîtrisez vos coûts
                 </a>
               </li>
             </ul>
