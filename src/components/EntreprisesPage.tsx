@@ -5,7 +5,6 @@ import PriceComparison from './PriceComparison';
 import ServicesGrid from './ServicesGrid';
 import FreelancerShowcase from './FreelancerShowcase';
 import ClientSection from './ClientSection';
-import Testimonials from './Testimonials';
 import Footer from './Footer';
 
 interface EntreprisesPageProps {
@@ -37,7 +36,6 @@ const EntreprisesPage: React.FC<EntreprisesPageProps> = ({ onNavigate }) => {
       <ServicesGrid />
       <FreelancerShowcase />
       <ClientSection onOpenForm={handleOpenForm} />
-      <Testimonials />
     </div>
   );
 };

@@ -2,6 +2,11 @@ import React from 'react';
 import { ArrowRight, Plus, Users, Building2, Briefcase, Database, Target, Shield, Zap, BarChart3 } from 'lucide-react';
 
 const ServicesGrid = () => {
+  const handleRecruitClick = () => {
+    // Créer un événement personnalisé pour déclencher l'ouverture du formulaire de recherche de consultant
+    const event = new CustomEvent('openConsultantFormFromServices');
+    window.dispatchEvent(event);
+  };
   const services = [
     {
       id: 1,
@@ -98,7 +103,10 @@ const ServicesGrid = () => {
                     <span>Voir plus</span>
                     <Plus className="h-4 w-4" />
                   </a>
-                  <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                  <button 
+                    onClick={handleRecruitClick}
+                    className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                  >
                     Recruter
                   </button>
                 </div>

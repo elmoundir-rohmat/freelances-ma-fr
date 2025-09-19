@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronRight, Star, CheckCircle } from 'lucide-react';
 
 const Hero = () => {
@@ -60,6 +60,19 @@ const Hero = () => {
       [e.target.name]: e.target.value
     });
   };
+
+  // Écouter l'événement personnalisé pour ouvrir le formulaire depuis ServicesGrid
+  useEffect(() => {
+    const handleOpenConsultantForm = () => {
+      setShowForm(true);
+    };
+
+    window.addEventListener('openConsultantFormFromServices', handleOpenConsultantForm);
+
+    return () => {
+      window.removeEventListener('openConsultantFormFromServices', handleOpenConsultantForm);
+    };
+  }, []);
 
   return (
     <section className="bg-gradient-to-br from-blue-50 via-white to-teal-50 py-20 lg:py-28">

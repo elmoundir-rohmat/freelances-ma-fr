@@ -63,8 +63,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     if (window.location.pathname === '/freelance') {
                       const event = new CustomEvent('openFormFromFooter');
                       window.dispatchEvent(event);
-                    } else {
-                      // Sinon rediriger vers la page freelance
+                    } else if (window.location.pathname !== '/') {
+                      // Sinon rediriger vers la page freelance seulement si on n'est pas sur la page d'accueil
                       if (onNavigate) {
                         onNavigate('freelance');
                       }
@@ -82,7 +82,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     e.preventDefault();
                     if (window.location.pathname === '/freelance') {
                       handleScrollToSection('concept');
-                    } else {
+                    } else if (window.location.pathname !== '/') {
                       if (onNavigate) {
                         onNavigate('freelance');
                       }
@@ -98,7 +98,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   href="/freelance" 
                   onClick={(e) => {
                     e.preventDefault();
-                    if (onNavigate) {
+                    if (window.location.pathname !== '/' && onNavigate) {
                       onNavigate('freelance');
                     }
                   }}
@@ -179,7 +179,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   href="/entreprises" 
                   onClick={(e) => {
                     e.preventDefault();
-                    if (onNavigate) {
+                    if (window.location.pathname !== '/' && onNavigate) {
                       onNavigate('entreprises');
                     }
                   }}

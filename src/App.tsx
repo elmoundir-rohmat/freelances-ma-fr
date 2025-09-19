@@ -62,7 +62,6 @@ function App() {
     <div className="min-h-screen bg-white">
       <Header />
       <HomePage />
-      <Footer onNavigate={handleNavigation} />
     </div>
   );
 }
