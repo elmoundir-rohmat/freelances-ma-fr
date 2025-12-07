@@ -197,7 +197,7 @@ const PriceComparison = ({ onOpenFormFromOutside, initialFormData }: PriceCompar
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Configuration du Projet
+                Type de profil recherché
               </h3>
               
               <div className="space-y-6">
@@ -337,11 +337,11 @@ const PriceComparison = ({ onOpenFormFromOutside, initialFormData }: PriceCompar
         <div className="text-center">
           <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Prêt à économiser sur votre projet ?
+              Livrez plus de projets en renforçant vos équipes
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Nos consultants français vous offrent la même qualité à moitié prix. 
-              Contactez-nous pour démarrer votre projet avec un budget optimisé.
+              Recrutez des profils français qualifiés pour livrer vos projets sans vous ruiner. 
+              Contactez-nous pour en discuter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 

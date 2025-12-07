@@ -146,7 +146,7 @@ const FreelanceHero = () => {
                 <span className="text-blue-600">Maroc</span>
               </h1>
               <p className="text-xl text-blue-500 leading-relaxed">
-                CLIENTS FRANÇAIS • RÉMUNERATION INTÉRESSANTE
+                CLIENTS FRANÇAIS • 100% REMOTE
               </p>
             </div>
 
@@ -175,7 +175,7 @@ const FreelanceHero = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="text-gray-600">Rémuneration attractive, gardez un niveau de vie comparable à la France</span>
+                <span className="text-gray-600">Rémuneration attractive, garde un niveau de vie comparable à la France</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-green-500" />

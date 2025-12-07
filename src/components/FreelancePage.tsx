@@ -216,18 +216,18 @@ const FreelancePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Le Concept FreeMote
+              FreeMote c'est quoi ?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Nous connectons les talents MRE avec les entreprises françaises, 
-              créant des opportunités pour les deux parties.
+              créant des opportunités pour les deux.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Pourquoi Travailler avec FreeMote ?
+                Pourquoi FreeMote ?
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -274,7 +274,7 @@ const FreelancePage = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
-                  <p className="text-gray-700">Vous postulez via notre formulaire</p>
+                  <p className="text-gray-700">Vous postule via notre formulaire</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>
@@ -347,7 +347,7 @@ const FreelancePage = () => {
             Prêt à Rejoindre FreeMote ?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Postulez dès maintenant et commencez à travailler avec des clients français 
+            Postule dès maintenant et commence à travailler avec des clients français 
             depuis le Maroc.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -355,14 +355,14 @@ const FreelancePage = () => {
               onClick={() => setShowForm(true)}
               className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-lg flex items-center justify-center gap-2"
             >
-              Postuler Maintenant
+              Je postule
               <ArrowRight className="h-5 w-5" />
             </button>
             <button 
               onClick={handleOpenRevenueForm}
               className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium text-lg"
             >
-              Estimer mon revenu
+              J'estime mon revenu
             </button>
           </div>
         </div>

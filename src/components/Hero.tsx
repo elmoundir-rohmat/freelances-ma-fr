@@ -82,16 +82,14 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Des consultants IT{' '}
+                Renforcez vos équipes 
                 <br />
-                <span className="text-blue-600">en Remote</span>{' '}
-
-                à des TJM{' '}
+                et livrez vos projets{' '}
                 <br />
-                (très) compétitifs
+                <span className="text-blue-600">sans vous ruiner</span>{' '}
               </h1>
               <p className="text-xl text-blue-500 leading-relaxed">
-                IT - DATA - MANAGEMENT - CYBERSECURITE - PRODUIT
+                CONSULTANTS IT - DATA - MANAGEMENT - CYBERSECURITE - PRODUIT
               </p>
             </div>
 
