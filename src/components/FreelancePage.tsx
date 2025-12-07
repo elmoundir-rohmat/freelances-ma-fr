@@ -219,6 +219,7 @@ const FreelancePage = () => {
               FreeMote c'est quoi ?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              La meilleure solution pour t'installer au Maroc et travailler en remote.
               Nous connectons les talents MRE avec les entreprises françaises, 
               créant des opportunités pour les deux.
             </p>
@@ -235,7 +236,7 @@ const FreelancePage = () => {
                     <Globe className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Accès au Marché Français</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">Accès au marché Français en Remote</h4>
                     <p className="text-gray-600">
                       Nous vous donnons accès à notre réseau de clients français : 
                       grands groupes, PME innovantes, et startups en croissance.
@@ -274,19 +275,19 @@ const FreelancePage = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
-                  <p className="text-gray-700">Vous postule via notre formulaire</p>
+                  <p className="text-gray-700">Tu postules via notre formulaire</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>
-                  <p className="text-gray-700">Nous évaluons votre profil et vos compétences</p>
+                  <p className="text-gray-700">Nous évaluons ton profil et tes compétences</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</div>
-                  <p className="text-gray-700">Nous vous proposons des missions adaptées</p>
+                  <p className="text-gray-700">Nous te proposons des missions adaptées</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</div>
-                  <p className="text-gray-700">Vous travaillez en remote avec nos clients français</p>
+                  <p className="text-gray-700">Tu commences à travailler en remote depuis le Maroc</p>
                 </div>
               </div>
             </div>
@@ -299,7 +300,7 @@ const FreelancePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Vos Avantages
+              Avantages
             </h2>
           </div>
 
@@ -319,10 +320,10 @@ const FreelancePage = () => {
               <div className="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <Briefcase className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Solutions de Création d'Entreprise</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Des clients grands groupes et Startups</h3>
               <p className="text-gray-600">
-                Solutions complètes de création de société ou de facturation au Maroc. 
-                Nous vous accompagnons dans vos démarches administratives et fiscales.
+                Des clients du CAC40 et Startups nous font confiance pour livrer des projets 
+                de qualité tout en étant en remote 
               </p>
             </div>
 
@@ -330,10 +331,10 @@ const FreelancePage = () => {
               <div className="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <Users className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Accompagnement légal et juridique sur Mesure</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Accompagnement fiscal et juridique sur Mesure</h3>
               <p className="text-gray-600">
-                Conseil, accompagnement légal et juridique personnalisé pour vous aider 
-                dans votre transition vers le Maroc. Notre équipe vous guide à chaque étape.
+                Solutions complètes de création de société ou de facturation au Maroc pour t'aider 
+                dans ta transition. Notre équipe te guide à chaque étape.
               </p>
             </div>
           </div>

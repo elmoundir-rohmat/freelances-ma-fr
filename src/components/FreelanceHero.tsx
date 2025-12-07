@@ -140,9 +140,9 @@ const FreelanceHero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Des missions en{' '}
-                <span className="text-blue-600">Remote</span>{' '}
-                depuis le{' '}
+                Trouve ta mission{' '}
+                <span className="text-blue-600">remote</span>{' '}
+                et installe toi au{' '}
                 <span className="text-blue-600">Maroc</span>
               </h1>
               <p className="text-xl text-blue-500 leading-relaxed">
